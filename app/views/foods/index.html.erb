@@ -1,0 +1,59 @@
+<h1>Top Foods</h1>
+
+Most Protein: <br>
+<% @most_protein_top_3.each do |f| %>
+        <%= f.company_name %> 
+        <%= f.food_name %> 
+        <%= f.protein %> <br>
+        <% end %>
+<p>
+	Best Protein Ratio: <br>
+<% @most_protein_ratio_top_3.each do |f| %>
+        <%= f.company_name %> 
+        <%= f.food_name %> 
+        <%= (f.protein / (f.calories / 100)).round(1) %> <br> <!-- Calculates grams of protein per 100 calories-->
+        <% end %>
+<p>
+<h1>Listing All Foods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Food name</th>
+      <th>Serving size</th>
+      <th>Serving units</th>
+      <th>Calories</th>
+      <th>Carbs</th>
+      <th>Fat</th>
+      <th>Protein</th>
+      <th>Cost</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foods.each do |food| %>
+      <tr>
+        <td><%= food.company_name %></td>
+        <td><%= food.food_name %></td>
+        <td><%= food.serving_size %></td>
+        <td><%= food.serving_units %></td>
+        <td><%= food.calories %></td>
+        <td><%= food.carbs %></td>
+        <td><%= food.fat %></td>
+        <td><%= food.protein %></td>
+        <td><%= food.cost %></td>
+        <td><%= link_to 'Show', food %></td>
+        <td><%= link_to 'Edit', edit_food_path(food) %></td>
+        <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Food', new_food_path %>
