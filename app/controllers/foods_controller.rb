@@ -8,7 +8,12 @@ class FoodsController < ApplicationController
     
     #sort by protein, then reverse to get descending, then take the "top 3"
     @most_protein_top_3 = @foods.sort_by {|a| a["protein"]}.reverse.take(3)
-    @most_protein_ratio_top_3 = @foods.sort_by {|a| a["protein"]/a["calories"]}.reverse.take(3)
+    @most_protein_cal_top_3 = @foods.sort_by {|a| a["protein"]/a["calories"]}.reverse.take(3)
+    @most_protein_dollar_top_3 = @foods.sort_by {|a| a["protein"]/a["cost"]}.reverse.take(3)
+    
+    @foods_grid = FoodsGrid.new(params[:foods_grid]) do |scope|
+      scope.page(params[:page]).per_page(10)
+    end
   end
 
   # GET /foods/1
