@@ -29,13 +29,17 @@
 	<div class="center container-fluid">	
 	<h1>All Foods</h1>
 	
-	<%= form_tag("foods", method: "get") do %>
+	<%= form_tag("/search", method: "get") do %>
 	  <%= label_tag(:company_name, "Search for:") %>
-
 	  <%= collection_select(:company_list, :list, Food.all, :company_name, :company_name, {}, :multiple=>true) %>
-	  
 	  <br>
-	  <%= submit_tag("Search") %>
+	  <%= label_tag :food_name, "Search food" %>
+  	  <%= text_field_tag :food_name %>
+  	  <br>
+  	  <%= label_tag :protein, "Minimum Protein" %>
+  	  <%= text_field_tag :protein %>
+	  <br>
+	  <%= submit_tag("Search", :name => nil) %>
 	<% end %>
 	
 		<div class="table-responsive">
@@ -48,7 +52,7 @@
 		    	</tr>
 		    </thead>
 		    <tbody>
-		    	 <% @filtered_foods.sort_by{|a| a["protein"]}.reverse.each do |data| %>
+		    	 <% @grid_foods.sort_by{|a| a["protein"]}.reverse.each do |data| %>
 		      <tr>
 		      	<td><%= data.company_name %></b></td>
 		      	<td><%= data.food_name %></td>
