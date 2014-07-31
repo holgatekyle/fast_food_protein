@@ -4,31 +4,10 @@ class FoodsController < ApplicationController
 
   # GET /foods
   def index    
-    @all_foods = Food.all
-
-    if params[:company_list] #check if params are sent through
-        @company_filter_list = params[:company_list][:list].reject!(&:empty?) #remove empty entries
-      if  @company_filter_list.any?
-        @filtered_foods = @all_foods.companies(@company_filter_list)  
-      end
-            
-    end
-    
-    if @filtered_foods #if we have a filtered list by company, use that
-      @grid_foods = apply_scopes(@filtered_foods)
-    else
-      @grid_foods = apply_scopes(@all_foods)
-    end
-    
-    #sort by protein, then reverse to get descending, then take the "top 3"
-    @most_protein_top_3 = @all_foods.sort_by {|a| a["protein"]}.reverse.take(3)
-    @most_protein_cal_top_3 = @all_foods.sort_by {|a| a["protein"]/a["calories"]}.reverse.take(3)
-    @most_protein_dollar_top_3 = @all_foods.sort_by {|a| a["protein"]/a["cost"]}.reverse.take(3)
-    
   end
   
   def search    
-    @all_foods = Food.all
+    @all_foods = Food.all_solid_foods
 
     if params[:company_list] #check if params are sent through
         @company_filter_list = params[:company_list][:list].reject!(&:empty?) #remove empty entries
@@ -46,13 +25,12 @@ class FoodsController < ApplicationController
     
     #sort by protein, then reverse to get descending, then take the "top 3"
     @most_protein_top_3 = @all_foods.sort_by {|a| a["protein"]}.reverse.take(3)
-    @most_protein_cal_top_3 = @all_foods.sort_by {|a| a["protein"]/a["calories"]}.reverse.take(3)
-    @most_protein_dollar_top_3 = @all_foods.sort_by {|a| a["protein"]/a["cost"]}.reverse.take(3)
+    #multiple by 1.0 or it won't divide how we want it, SQLite issue
+    @most_protein_cal_top_3 = @all_foods.sort_by {|a| (a["protein"]*1.0)/a["calories"]}.reverse.take(3)
     
   end
 
   # GET /foods/1
-  # GET /foods/1.jso
   def show
   end
 
@@ -66,7 +44,6 @@ class FoodsController < ApplicationController
   end
 
   # POST /foods
-  # POST /foods.json
   def create
     @food = Food.new(food_params)
 
@@ -82,7 +59,6 @@ class FoodsController < ApplicationController
   end
 
   # PATCH/PUT /foods/1
-  # PATCH/PUT /foods/1.json
   def update
     respond_to do |format|
       if @food.update(food_params)
@@ -96,7 +72,6 @@ class FoodsController < ApplicationController
   end
 
   # DELETE /foods/1
-  # DELETE /foods/1.json
   def destroy
     @food.destroy
     respond_to do |format|

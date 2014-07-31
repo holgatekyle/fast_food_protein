@@ -2,8 +2,8 @@ BestFood::Application.routes.draw do
   
   
   resources :foods
-  match '/search',   to: 'foods#index',   via: 'get'
-  root 'foods#index'
+  match '/search',   to: 'foods#search',   via: 'get'
+  root 'foods#search'
   
   
   get ':action' => 'foods#:action'

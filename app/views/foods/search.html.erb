@@ -1,0 +1,63 @@
+
+	<div class="center container-fluid">	
+	<h1>Top Foods</h1>
+	
+	Most Protein: <br>
+	<% @most_protein_top_3.each do |f| %>
+	        <%= f.company_name %> 
+	        <%= f.food_name %> 
+	        <%= f.protein.to_s().split(".")[0] %> <br>
+	        <% end %>
+	<p>
+		
+		Best Protein/100 kcal Ratio: <br>
+	<% @most_protein_cal_top_3.each do |f| %>
+	        <%= f.company_name %> 
+	        <%= f.food_name %> 
+	        <%= (f.protein / (f.calories / 100)).round(1) %> <br>
+	        <% end %>
+	<p>
+	</div>
+
+	<div class="center container-fluid">	
+	<h1>All Foods</h1>
+	
+	<%= form_tag("/search", method: "get") do %>
+	  <%= label_tag(:company_name, "Search for:") %>
+	  <%= collection_select(:company_list, :list, Food.distinct_company_names, :company_name, :company_name, {}, :multiple=>true) %>
+	  <br>
+	  <%= label_tag :food_name, "Search food" %>
+  	  <%= text_field_tag :food_name %>
+  	  <br>
+  	  <%= label_tag :protein, "Minimum Protein" %>
+  	  <%= text_field_tag :protein %>
+	  <br>
+	  <%= submit_tag("Search", :name => nil) %>
+	<% end %>
+	
+		<div class="table-responsive">
+		  <table class="table table-striped">
+		    <thead> 
+		    	<tr>
+		    		<th>Company Name</th>
+		    		<th>Food Name</th>
+		    		<th>Protein</th>
+		    		<th>Calories</th>
+		    		<th>Protein/100 kcal Ration</th>
+		    	</tr>
+		    </thead>
+		    <tbody>
+		    	 <% @grid_foods.sort_by{|a| a["protein"]}.reverse.each do |data| %>
+		      <tr>
+		      	<td><%= data.company_name %></b></td>
+		      	<td><%= data.food_name %></td>
+		      	<td><%= data.protein %></td>
+		      	<td><%= data.calories %></td>
+		      	<td><%= (((data.protein*1.0)/data.calories)*100).round(1) %></td>
+		      </tr>
+		    <% end %>
+		    </tbody>
+		  </table>
+		</div>
+	
+	</div>
