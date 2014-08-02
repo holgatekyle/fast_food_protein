@@ -1,4 +1,3 @@
-
 	<div class="center container-fluid">	
 	<h1>Top Foods</h1>
 	
@@ -14,7 +13,7 @@
 	<% @most_protein_cal_top_3.each do |f| %>
 	        <%= f.company_name %> 
 	        <%= f.food_name %> 
-	        <%= (f.protein / (f.calories / 100)).round(1) %> <br>
+	        <%= f.p_100_ratio %> <br>
 	        <% end %>
 	<p>
 	</div>
@@ -24,7 +23,7 @@
 	
 	<%= form_tag("/search", method: "get") do %>
 	  <%= label_tag(:company_name, "Search for:") %>
-	  <%= collection_select(:company_list, :list, Food.distinct_company_names, :company_name, :company_name, {}, :multiple=>true) %>
+	  <%= collection_select(:company_list, :list, Food.distinct_company_names, :company_name, :company_name, {:selected => @company_filter_list}, :multiple=>true) %>
 	  <br>
 	  <%= label_tag :food_name, "Search food" %>
   	  <%= text_field_tag :food_name %>
@@ -32,11 +31,27 @@
   	  <%= label_tag :protein, "Minimum Protein" %>
   	  <%= text_field_tag :protein %>
 	  <br>
+	  <div class="center container">
+		 <div class="col-md-2 col-md-offset-4">
+				<%= select_tag(:not_selected, options_for_select(@extra_columns), :multiple=>true, :id=>"from") %>
+			    </div>
+					    <div class= "controls col-md-2">
+					        <a href="javascript:moveAll('from', 'to')">&gt;&gt;</a>
+					        <a href="javascript:moveSelected('from', 'to')">&gt;</a>
+					        <a href="javascript:moveSelected('to', 'from')">&lt;</a>
+					        <a href="javascript:moveAll('to', 'from')" href="#">&lt;&lt;</a>
+					    </div>
+					    <div class = "col-md-2">
+			    <%= select_tag(:extra_columns, nil, :multiple=>true, :id=>"to") %>
+			    </select>
+		    </div>
+   </div>
+    <br>
 	  <%= submit_tag("Search", :name => nil) %>
 	<% end %>
 	
 		<div class="table-responsive">
-		  <table class="table table-striped">
+		  <table id="allfoods" class="tablesorter">
 		    <thead> 
 		    	<tr>
 		    		<th>Company Name</th>
@@ -61,3 +76,22 @@
 		</div>
 	
 	</div>
+	
+	<!-- enable sortable tableheaders -->
+<script>
+	$(function(){
+	  $('#allfoods').tablesorter(); 
+	});
+</script>
+
+	<!-- moving select list back and forth -->
+<script>
+    function moveAll(from, to) {
+        $('#'+from+' option').remove().appendTo('#'+to); 
+    }
+    
+    function moveSelected(from, to) {
+        $('#'+from+' option:selected').remove().appendTo('#'+to); 
+    }
+</script>
+    

@@ -8,7 +8,16 @@ class FoodsController < ApplicationController
   
   def search    
     @all_foods = Food.all_solid_foods
-
+    @extra_columns = get_column_names
+    
+    puts params[:extra_columns]
+    
+    #sort by protein, then reverse to get descending, then take the "top 3"
+    @most_protein_top_3 = @all_foods.top_protein(3, 'all')
+    @most_protein_cal_top_3 = @all_foods.top_protein_cal(3, 'all')
+    
+  
+    #this block is for the user-filtered list
     if params[:company_list] #check if params are sent through
         @company_filter_list = params[:company_list][:list].reject!(&:empty?) #remove empty entries
       if  @company_filter_list.any?
@@ -22,11 +31,6 @@ class FoodsController < ApplicationController
     else
       @grid_foods = apply_scopes(@all_foods)
     end
-    
-    #sort by protein, then reverse to get descending, then take the "top 3"
-    @most_protein_top_3 = @all_foods.sort_by {|a| a["protein"]}.reverse.take(3)
-    #multiple by 1.0 or it won't divide how we want it, SQLite issue
-    @most_protein_cal_top_3 = @all_foods.sort_by {|a| (a["protein"]*1.0)/a["calories"]}.reverse.take(3)
     
   end
 
@@ -89,6 +93,10 @@ class FoodsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def food_params
       params.require(:food).permit(:company_name, :food_name, :serving_size, :serving_units, :calories, :carbs, :fat, :protein, :cost)
+    end
+    
+    def get_column_names
+      return [['Carbs','carbs'],['Fats','fats']]
     end
 
 end
