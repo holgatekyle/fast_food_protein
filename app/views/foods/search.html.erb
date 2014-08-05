@@ -16,7 +16,6 @@
 	        <%= f.p_100_ratio %> <br>
 	        <% end %>
 	<p>
-	</div>
 
 	<div class="center container-fluid">	
 	<h1>All Foods</h1>
@@ -31,20 +30,12 @@
   	  <%= label_tag :protein, "Minimum Protein" %>
   	  <%= text_field_tag :protein %>
 	  <br>
-	  <div class="center container">
-		 <div class="col-md-2 col-md-offset-4">
-				<%= select_tag(:not_selected, options_for_select(@extra_columns), :multiple=>true, :id=>"from") %>
-			    </div>
-					    <div class= "controls col-md-2">
-					        <a href="javascript:moveAll('from', 'to')">&gt;&gt;</a>
-					        <a href="javascript:moveSelected('from', 'to')">&gt;</a>
-					        <a href="javascript:moveSelected('to', 'from')">&lt;</a>
-					        <a href="javascript:moveAll('to', 'from')" href="#">&lt;&lt;</a>
-					    </div>
-					    <div class = "col-md-2">
-			    <%= select_tag(:extra_columns, nil, :multiple=>true, :id=>"to") %>
-			    </select>
-		    </div>
+	  <a id="show-column-link">Show More Columns</a>
+		<!-- hidden list unless label above is clicked -->
+		<div id="column_list" style="display:none;" >
+			<%= select_tag(:extra_columns, options_for_select(@extra_columns_list, @extra_columns_selected), :multiple=>true) %>
+		</div>
+	<br>
    </div>
     <br>
 	  <%= submit_tag("Search", :name => nil) %>
@@ -58,7 +49,10 @@
 		    		<th>Food Name</th>
 		    		<th>Protein</th>
 		    		<th>Calories</th>
-		    		<th>Protein/100 kcal Ration</th>
+		    		<th>Protein/100 kcal</th>
+		    		<% @extra_columns_selected.each do |x|%>
+		    		<th><%= normalize_column_name(x) %></th>
+		    		<% end %>
 		    	</tr>
 		    </thead>
 		    <tbody>
@@ -69,6 +63,9 @@
 		      	<td><%= data.protein %></td>
 		      	<td><%= data.calories %></td>
 		      	<td><%= (((data.protein*1.0)/data.calories)*100).round(1) %></td>
+			      	<% @extra_columns_selected.each do |q| %>
+			    		<td><%= data[q] %></td>
+			    	<% end %>
 		      </tr>
 		    <% end %>
 		    </tbody>
@@ -82,16 +79,8 @@
 	$(function(){
 	  $('#allfoods').tablesorter(); 
 	});
+	
+	$('#show-column-link').click(function() {
+  $('#column_list').toggle();
+});
 </script>
-
-	<!-- moving select list back and forth -->
-<script>
-    function moveAll(from, to) {
-        $('#'+from+' option').remove().appendTo('#'+to); 
-    }
-    
-    function moveSelected(from, to) {
-        $('#'+from+' option:selected').remove().appendTo('#'+to); 
-    }
-</script>
-    

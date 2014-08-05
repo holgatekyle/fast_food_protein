@@ -8,9 +8,14 @@ class FoodsController < ApplicationController
   
   def search    
     @all_foods = Food.all_solid_foods
-    @extra_columns = get_column_names
+    @extra_columns_list = get_column_names
     
-    puts params[:extra_columns]
+    if params[:extra_columns]
+      @extra_columns_selected = params[:extra_columns]
+    else
+      @extra_columns_selected = []
+    end
+    
     
     #sort by protein, then reverse to get descending, then take the "top 3"
     @most_protein_top_3 = @all_foods.top_protein(3, 'all')
@@ -96,7 +101,7 @@ class FoodsController < ApplicationController
     end
     
     def get_column_names
-      return [['Carbs','carbs'],['Fats','fats']]
+      return [['Carbs', 'carbs'],['Fats', 'fats']]
     end
 
 end
