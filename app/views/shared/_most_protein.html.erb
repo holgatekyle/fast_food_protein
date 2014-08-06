@@ -1,0 +1,24 @@
+<div class="container-fluid">
+<center>
+	
+	<h3>Best Protein/100 kcal Ratio:</h3>
+	<table>
+		<% most_protein.top_protein_cal(3).each do |f| %>
+		<tr>
+	        <td class="left-text"><%= f.company_name %> <%= f.food_name %></td>
+	        <td><span class="highlight-text"><%= f.p_100_ratio %> g</span></td>
+	        <% end %>
+	</table>
+	
+	<h3 class="shape">Most Protein:</h3>
+		
+	<table>
+		<% most_protein.top_protein(3).each do |f| %>
+		<tr>
+	        <td class="left-text"><%= f.company_name %> <%= f.food_name %></td>
+	        <td><span class="highlight-text"><%= f.protein %> g</span></td>
+	    </tr>
+	        <% end %>
+	    </table>
+</center>
+</div>

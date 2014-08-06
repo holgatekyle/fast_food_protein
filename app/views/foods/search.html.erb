@@ -1,86 +1,11 @@
 	<div class="center container-fluid">	
-	<h1>Top Foods</h1>
-	
-	Most Protein: <br>
-	<% @most_protein_top_3.each do |f| %>
-	        <%= f.company_name %> 
-	        <%= f.food_name %> 
-	        <%= f.protein.to_s().split(".")[0] %> <br>
-	        <% end %>
-	<p>
-		
-		Best Protein/100 kcal Ratio: <br>
-	<% @most_protein_cal_top_3.each do |f| %>
-	        <%= f.company_name %> 
-	        <%= f.food_name %> 
-	        <%= f.p_100_ratio %> <br>
-	        <% end %>
-	<p>
-
-	<div class="center container-fluid">	
 	<h1>All Foods</h1>
-	
-	<%= form_tag("/search", method: "get") do %>
-	  <%= label_tag(:company_name, "Search for:") %>
-	  <%= collection_select(:company_list, :list, Food.distinct_company_names, :company_name, :company_name, {:selected => @company_filter_list}, :multiple=>true) %>
-	  <br>
-	  <%= label_tag :food_name, "Search food" %>
-  	  <%= text_field_tag :food_name %>
-  	  <br>
-  	  <%= label_tag :protein, "Minimum Protein" %>
-  	  <%= text_field_tag :protein %>
-	  <br>
-	  <a id="show-column-link">Show More Columns</a>
-		<!-- hidden list unless label above is clicked -->
-		<div id="column_list" style="display:none;" >
-			<%= select_tag(:extra_columns, options_for_select(@extra_columns_list, @extra_columns_selected), :multiple=>true) %>
-		</div>
-	<br>
-   </div>
-    <br>
-	  <%= submit_tag("Search", :name => nil) %>
-	<% end %>
-	
-		<div class="table-responsive">
-		  <table id="allfoods" class="tablesorter">
-		    <thead> 
-		    	<tr>
-		    		<th>Company Name</th>
-		    		<th>Food Name</th>
-		    		<th>Protein</th>
-		    		<th>Calories</th>
-		    		<th>Protein/100 kcal</th>
-		    		<% @extra_columns_selected.each do |x|%>
-		    		<th><%= normalize_column_name(x) %></th>
-		    		<% end %>
-		    	</tr>
-		    </thead>
-		    <tbody>
-		    	 <% @grid_foods.sort_by{|a| a["protein"]}.reverse.each do |data| %>
-		      <tr>
-		      	<td><%= data.company_name %></b></td>
-		      	<td><%= data.food_name %></td>
-		      	<td><%= data.protein %></td>
-		      	<td><%= data.calories %></td>
-		      	<td><%= (((data.protein*1.0)/data.calories)*100).round(1) %></td>
-			      	<% @extra_columns_selected.each do |q| %>
-			    		<td><%= data[q] %></td>
-			    	<% end %>
-		      </tr>
-		    <% end %>
-		    </tbody>
-		  </table>
-		</div>
+	<%= render "shared/search_form" %>	
+
+	<%= render partial: "shared/most_protein", locals: {most_protein: @grid_foods} %>
+
+	<%= render "shared/search_table" %>	
 	
 	</div>
 	
 	<!-- enable sortable tableheaders -->
-<script>
-	$(function(){
-	  $('#allfoods').tablesorter(); 
-	});
-	
-	$('#show-column-link').click(function() {
-  $('#column_list').toggle();
-});
-</script>

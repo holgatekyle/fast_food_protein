@@ -8,11 +8,9 @@ th {
 }
 
 
-#show-column-link {
-  font-weight: bold;
-  padding: 2px;
-      &:hover{
-        cursor: pointer;
-      }
-  
+
+.left-text{
+  text-align: left;
+  margin-top: 5px;
 }
+

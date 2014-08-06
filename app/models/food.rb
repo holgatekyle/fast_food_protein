@@ -22,28 +22,15 @@ class Food < ActiveRecord::Base
     return find(:all, :select => "DISTINCT company_name")
   end
   
-  #return top total protein
-  def self.top_protein(num_in, company_names_in)
-    if company_names_in == 'all'
-       @foods_list = self.all
-    else
-       @foods_list = self.where("company_name IN (?)", company_names_in)
-    end
-
-    return @foods_list.sort_by {|a| a.protein}.reverse.take(num_in)
-  end
-  
   #return top protein/cal ratio
-  def self.top_protein_cal(num_in, company_names_in)
-    if company_names_in == 'all'
-       @foods_list = self.all
-    else
-       @foods_list = self.where("company_name IN (?)", company_names_in)
-    end
-
-    return @foods_list.sort_by {|a| a.p_100_ratio}.reverse.take(num_in)
+  def self.top_protein_cal(num_in)
+     self.all.sort_by {|a| a.p_100_ratio}.reverse.take(num_in)
   end
   
+  #return top total protein
+  def self.top_protein(num_in)
+     self.all.sort_by {|a| a.protein}.reverse.take(num_in)
+  end
   
   #protein/100cal ratio
   def p_100_ratio

@@ -7,26 +7,19 @@ class FoodsController < ApplicationController
   end
   
   def search    
-    @all_foods = Food.all_solid_foods
     @extra_columns_list = get_column_names
     
     if params[:extra_columns]
       @extra_columns_selected = params[:extra_columns]
     else
       @extra_columns_selected = []
-    end
-    
-    
-    #sort by protein, then reverse to get descending, then take the "top 3"
-    @most_protein_top_3 = @all_foods.top_protein(3, 'all')
-    @most_protein_cal_top_3 = @all_foods.top_protein_cal(3, 'all')
-    
+    end    
   
     #this block is for the user-filtered list
     if params[:company_list] #check if params are sent through
         @company_filter_list = params[:company_list][:list].reject!(&:empty?) #remove empty entries
       if  @company_filter_list.any?
-        @filtered_foods = @all_foods.companies(@company_filter_list)  
+        @filtered_foods = Food.all_solid_foods.companies(@company_filter_list)  
       end
             
     end
@@ -34,7 +27,7 @@ class FoodsController < ApplicationController
     if @filtered_foods #if we have a filtered list by company, use that
       @grid_foods = apply_scopes(@filtered_foods)
     else
-      @grid_foods = apply_scopes(@all_foods)
+      @grid_foods = apply_scopes(Food.all_solid_foods)
     end
     
   end

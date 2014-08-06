@@ -1,11 +1,18 @@
 @import "bootstrap";
+@import "variables";
 
 html {
   overflow-y: scroll;
 }
 
-body {
+html body {
   padding-top: 60px;
+  background-color:$main-bg !important;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+.main-box{
+  background-color:$main-container;
 }
 
 section {
@@ -16,6 +23,52 @@ textarea {
   resize: vertical;
 }
 
+table td{
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  padding-right: 8px;
+  text-align: right;
+}
+
+
+p {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+.left-text{
+  text-align: left;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -1px;
+  color: $fgold;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+h4 {
+  margin-bottom: 5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
 .center {
   text-align: center;
 }
+
+

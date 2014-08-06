@@ -1,31 +1,26 @@
 $grayMediumLight: #eaeaea;
 $black: #000;
-$off-wht: rgba(white,.4);
 $cream: #FEF9F0;
 $offwhite: #F0F0F0;
 
-$lime: #DDE9CA;
-$mint: #85C6A9;
-$money: #73AB5C;
-$darkMoney: #35794B;
-$teal: #1693A5;
-
-$lightBlue: #D2E4FC;
-$blue: #2A8FBD;
-
-$orangeRed: #F27405;
-$cheeryPink: #FF6B6B;
-
 /* tech city */
 $darkGray: #444444;
-$brightRed: #FF2255;
-$creamy: #EEEEDD;
-$darkTeal: #559999;
-$menthol: #CCDDCC;
 $lightGray: #D3D5CF;
 $mediumGray: rgba($darkGray,.2);
 
+/*fresh*/
+$fwhite: #F3F3F3;
+$fpink: #F35C9F;
+$fgold: #FBB829;
+$ftan: #F2E0CC;
+$flightBlue: #00AAFF;
+$fdarkBlue: #23426A;
+
 
 /* final color choice */
-$main-color: $blue;
+$main-bg: $fdarkBlue;
+$main-container: $fwhite;
+
+
+$main-color: $black;
 $accent-color: $offwhite;
