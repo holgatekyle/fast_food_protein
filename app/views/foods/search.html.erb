@@ -4,7 +4,7 @@
 
 	<%= render partial: "shared/most_protein", locals: {most_protein: @grid_foods} %>
 
-	<%= render "shared/search_table" %>	
+	<%= render partial: "shared/search_table", locals: {grid_food: @grid_foods, extra_columns_selected: @extra_columns_selected} %>	
 	
 	</div>
 	

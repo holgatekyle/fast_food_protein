@@ -31,6 +31,12 @@
   font-size: 17px;
 }
 
+.search-form-select-list-big{
+  margin: 25px;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 30px;
+}
+
 select{
 }
 
@@ -67,6 +73,27 @@ option{
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 15px;
+  @include trans(0.2s ease-in-out); 
+  text: {
+    transform: uppercase;
+    decoration: none;
+    shadow: 0 .063em rgba(black,.3);
+  }
+  cursor:pointer;
+}
+
+.btn-search-big {
+  @include btn-theme($flightBlue);
+  display: inline-block;
+  margin: 10px; 
+  padding: 25px;
+  border: .094em solid;
+  border-radius: .625em;
+  box-shadow: 0 .375em .313em -.313em rgba(black,.8), inset 0 .063em $fwhite, inset 0 -.188em rgba(black,.15);
+  color: #FFF;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
   @include trans(0.2s ease-in-out); 
   text: {
     transform: uppercase;

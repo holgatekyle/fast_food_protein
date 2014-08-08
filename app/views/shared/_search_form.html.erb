@@ -1,5 +1,6 @@
   <div class="container-fluid search-criteria">	
-	<%= form_tag("/search", method: "get") do %>
+
+	<form action="/search" method="get">
 	  <div class="col-md-4">
 	  <div class="row"><h4><%= label_tag(:company_name, "Restaraunts:") %></h4></div>
 	  <%= collection_select(:company_list, :list, Food.distinct_company_names, :company_name, :company_name, {:selected => @company_filter_list}, :multiple=>true, :class=>"search-form-select-list") %>
@@ -10,12 +11,11 @@
 	  	  </div>
 	  <div class="col-md-4">
 	  <div class="row"><h4><%= label_tag(:extra_columns, "Show More Data:") %></h4></div>
-		<!-- hidden list unless label above is clicked -->
-		<!-- ><div id="column_list" style="display:none;" > -->
 			<%= select_tag(:extra_columns, options_for_select(@extra_columns_list, @extra_columns_selected), :multiple=>true, :class=>"search-form-select-list") %>
 	</div>
 	<div class="col-md-12"> 
 	  <%= submit_tag("Search", :name => nil, :class=>"btn btn-search") %>
 	  </div>
    </div>
-	<% end %>
+   </form>
+	

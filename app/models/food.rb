@@ -22,6 +22,10 @@ class Food < ActiveRecord::Base
     return find(:all, :select => "DISTINCT company_name")
   end
   
+  def self.is_company?(c_name)
+    !!Food.find_by_company_name(c_name)
+  end
+ 
   #return top protein/cal ratio
   def self.top_protein_cal(num_in)
      self.all.sort_by {|a| a.p_100_ratio}.reverse.take(num_in)
