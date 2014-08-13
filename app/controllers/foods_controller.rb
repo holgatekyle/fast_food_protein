@@ -11,21 +11,20 @@ class FoodsController < ApplicationController
     
     if params[:extra_columns]
       @extra_columns_selected = params[:extra_columns]
-    end    
+    end
   
     #this block is for the user-filtered list
     if params[:company_list] #check if params are sent through
         @company_filter_list = params[:company_list][:list].reject!(&:empty?) #remove empty entries
       if  @company_filter_list.any?
-        @filtered_foods = Food.all_solid_foods.companies(@company_filter_list)  
-      end
-            
+        @filtered_foods = Food.all_solid_foods(@show_breakfast).companies(@company_filter_list)  
+      end   
     end
     
     if @filtered_foods #if we have a filtered list by company, use that
       @grid_foods = apply_scopes(@filtered_foods)
     else
-      @grid_foods = apply_scopes(Food.all_solid_foods)
+      @grid_foods = apply_scopes(Food.all_solid_foods(@show_breakfast))
     end
     
   end
@@ -43,7 +42,7 @@ class FoodsController < ApplicationController
       redirect_to("/")
     end
     
-    @grid_foods = Food.all_solid_foods.companies(@company_name)
+    @grid_foods = Food.all_solid_foods(@show_breakfast).companies(@company_name)
     
   end
 
@@ -51,6 +50,11 @@ class FoodsController < ApplicationController
   
     def init_vars
       @extra_columns_selected = []
+      @show_breakfast = false
+      
+      if params[:breakfast] == "1"
+        @show_breakfast = true
+      end
     end
 
     def get_column_names

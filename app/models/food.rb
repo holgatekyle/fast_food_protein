@@ -13,13 +13,18 @@ class Food < ActiveRecord::Base
   #  CO = components (individual patty, etc.)
   
   #return any "solid" foods as categorized by me
-  def self.all_solid_foods
-    return where("food_class LIKE 'F%'")
+  def self.all_solid_foods(show_breakfast)
+    if show_breakfast
+      return where("food_class LIKE 'F%'")
+    else
+      return where("food_class LIKE 'FD%'")
+    end
+    
   end
   
   #return distinct company names
   def self.distinct_company_names
-    return find(:all, :select => "DISTINCT company_name")
+     self.find(:all, :select => "DISTINCT company_name").sort_by!{|x| x.company_name}
   end
   
   def self.is_company?(c_name)
