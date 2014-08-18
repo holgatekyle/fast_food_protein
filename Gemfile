@@ -35,11 +35,12 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'sqlite3', '1.3.8'
+  gem 'pg', '0.15.1'
   gem 'rspec-rails', '2.13.1'
 end
 
 group :test do
+  gem 'pg', '0.15.1'
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.1'
