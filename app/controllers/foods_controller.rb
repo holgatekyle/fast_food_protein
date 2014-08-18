@@ -3,16 +3,12 @@ class FoodsController < ApplicationController
   before_filter :init_vars
 
   # GET /foods
-  def index 
+  def index
+    @home_page = true
   end
   
   def search    
-    @extra_columns_list = get_column_names
-    
-    if params[:extra_columns]
-      @extra_columns_selected = params[:extra_columns]
-    end
-  
+ 
     #this block is for the user-filtered list
     if params[:company_list] #check if params are sent through
         @company_filter_list = params[:company_list][:list].reject!(&:empty?) #remove empty entries
@@ -30,16 +26,15 @@ class FoodsController < ApplicationController
   end
   
   def restaurant
-    if params[:company_name]
+   if params[:company_name]
       @company_name = params[:company_name][0]
       redirect_to("/r/"+@company_name)
-    else
-      @company_name ||= params[:id]
-    end  
-    puts '@company_name: '+@company_name
+   else
+     @company_name ||= params[:id]
+   end  
     
     if !Food.is_company?(@company_name)
-      redirect_to("/")
+      redirect_to(root_path)
     end
     
     @grid_foods = Food.all_solid_foods(@show_breakfast).companies(@company_name)
@@ -49,6 +44,7 @@ class FoodsController < ApplicationController
   private
   
     def init_vars
+      @home_page = false
       @extra_columns_selected = []
       @show_breakfast = false
       

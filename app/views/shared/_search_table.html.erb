@@ -16,7 +16,7 @@
 		    	</tr>
 		    </thead>
 		    <tbody>
-		    	 <% grid_food.sort_by{|a| a["protein"]}.reverse.each do |data| %>
+		    	 <% grid_food.each do |data| %>
 		      <tr>
 		      	<td class="left-text"><%= data.company_name %></b></td>
 		      	<td class="left-text"><%= data.food_name %></td>

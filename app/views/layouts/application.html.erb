@@ -2,13 +2,18 @@
 <html>
 <head>
   <title>BestFood</title>
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900,300italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,600,900,300italic,600italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,900,700italic,900italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= render 'shared/navbar' %>
+<% if !@home_page%>
+<% else %>
+<div class="home_page"> </div>
+<% end %>
 <div class="container main-box">
 
 	<%= yield %>

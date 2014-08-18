@@ -1,9 +1,20 @@
 <div class="center container-fluid">	
 	<h1><%= @company_name %></h1>
+
+	<form id="form" action="" method="get">
+		<div class="row"><%= check_box_tag 'breakfast', 1, @show_breakfast%> Show Breakfast</div>
+	</form>
+	
+	<script type="text/javascript">  
+        $(function(){
+         $('#breakfast').on('change',function(){
+            $('#form').submit();
+            });
+        });
+    </script>
 	
 	<%= render partial: "shared/most_protein", locals: {most_protein: @grid_foods} %>
 	
 	<%= render partial: "shared/search_table", locals: {grid_food: @grid_foods, extra_columns_selected: @extra_columns_selected} %>	
 	
 </div>
-

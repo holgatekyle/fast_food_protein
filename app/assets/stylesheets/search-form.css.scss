@@ -30,6 +30,8 @@
   margin: 25px;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-size: 30px;
+  font-weight: 600;
+  font-style: italic !important;
 }
 
 select{
@@ -80,8 +82,8 @@ option{
 .btn-search-big {
   @include btn-theme($flightBlue);
   display: inline-block;
-  margin: 10px; 
-  padding: 25px;
+  margin: 20px;
+  padding: 20px;
   border: .094em solid;
   border-radius: .625em;
   box-shadow: 0 .375em .313em -.313em rgba(black,.8), inset 0 .063em $fwhite, inset 0 -.188em rgba(black,.15);

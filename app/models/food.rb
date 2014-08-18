@@ -19,7 +19,6 @@ class Food < ActiveRecord::Base
     else
       return where("food_class LIKE 'FD%'")
     end
-    
   end
   
   #return distinct company names

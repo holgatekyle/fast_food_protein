@@ -3,27 +3,19 @@
 	<form action="/search" method="get">
 	  <div class="col-md-3 col-md-offset-3">
 	  <div class="row"><h4><%= label_tag(:company_name, "Restaraunts:") %></h4></div>
-	  <%= collection_select(:company_list, :list, Food.distinct_company_names, :company_name, :company_name, {:selected => @company_filter_list}, :multiple=>true, :class=>"search-form-select-list") %>
+	  <%= collection_select(:company_list, :list, Food.distinct_company_names, :company_name, :company_name, {:selected => @company_filter_list}, :multiple=>true, :size=>8,:class=>"search-form-select-list") %>
   	  </div>
 	  	  <div class="col-md-3">
 	  	  <div class="row"><h4><%= label_tag(:company_name, "Filters:") %></h4></div>
 	  	  <div class="row"><%= text_field_tag :food_name, nil, placeholder: "Food Name", class: "search-form-text-field" %></div>
 	  	  <div class="row"><%= text_field_tag :protein, nil, placeholder: "Minimum Protein (g)", class: "search-form-text-field" %></div>
-	  	  
-	  	  <% if @show_breakfast%>
-	  	  <div class="row"><%= check_box_tag 'breakfast', 1,  {:checked => "checked"}%> Show Breakfast</div>
-	  	  <% else %>
-	  	  <div class="row"><%= check_box_tag 'breakfast', 1%> Show Breakfast</div>
-	  	  <% end %>
-	  	  
-	  	  </div>
-	 <!-- <div class="col-md-4">
-	  <div class="row"><h4><%= label_tag(:extra_columns, "Show More Data:") %></h4></div>
-			<%= select_tag(:extra_columns, options_for_select(@extra_columns_list, @extra_columns_selected), :multiple=>true, :class=>"search-form-select-list") %>
-	</div> -->
+	  	  <div class="row"><%= check_box_tag 'breakfast', 1, @show_breakfast%> Show Breakfast</div>
+	  </div>
+
 	<div class="col-md-12"> 
-	  <%= submit_tag("Search", :name => nil, :class=>"btn btn-search") %>
+	  <%= submit_tag("Compare", :name => nil, :class=>"btn btn-search") %>
 	  </div>
    </div>
    </form>
+
 	

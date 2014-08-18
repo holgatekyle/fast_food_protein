@@ -1,0 +1,82 @@
+@import "variables";
+
+$bgDefault      : $main-color;
+$bgHighlight    : $accent-color;
+$colDefault     : $offwhite;
+$colHighlight   : #000;
+$black: #fcfefd;
+
+.navbar-default {
+  background-color: $bgDefault;
+  border:0px;
+  box-shadow: 0 .375em .313em -.313em rgba(black,.8);
+  .navbar-brand {
+    font-family: 'Playfair Display', Helvetica, Arial, sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -1px;
+    color: $colDefault;
+    &:hover, &:focus { 
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        font-family: 'Lato', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }
+      > .dropdown-menu {
+          background-color: $bgDefault;
+          padding:0px;
+          > li {
+             > a {
+                font-family: 'Lato', Helvetica, Arial, sans-serif;
+                font-size: 17px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                color: $bgHighlight;
+                &:hover,  &:focus {
+                  color: $colHighlight;
+                  }
+              }
+           } 
+        }
+       } //end .open
+    } //end navbar-nav
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus, {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+}

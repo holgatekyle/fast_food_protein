@@ -6,7 +6,6 @@ html {
 }
 
 html body {
-  padding-top: 60px;
   background-color:$main-bg !important;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
@@ -46,6 +45,13 @@ h2 {
   font-style: italic;
 }
 
+.subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
 h3 {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
@@ -61,6 +67,11 @@ h4 {
 
 .center {
   text-align: center;
+}
+
+.home_page{
+  padding-top: 40px;
+  margin-bottom: 20px;
 }
 
 
