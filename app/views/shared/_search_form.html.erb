@@ -9,7 +9,8 @@
 	  	  <div class="row"><h4><%= label_tag(:company_name, "Filters:") %></h4></div>
 	  	  <div class="row"><%= text_field_tag :food_name, nil, placeholder: "Food Name", class: "search-form-text-field" %></div>
 	  	  <div class="row"><%= text_field_tag :protein, nil, placeholder: "Minimum Protein (g)", class: "search-form-text-field" %></div>
-	  	  <div class="row"><%= check_box_tag 'breakfast', 1, @show_breakfast%> Show Breakfast</div>
+	  	  <div class="row"><%= text_field_tag :cals, nil, placeholder: "Maximum Calories", class: "search-form-text-field" %></div>
+	  	  <div class="row"><%= check_box_tag 'breakfast', 1, @show_breakfast%><span class="checkbox-text">Show Breakfast</span></div>
 	  </div>
 
 	<div class="col-md-12"> 

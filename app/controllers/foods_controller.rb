@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
-  has_scope :food_name, :protein
+  has_scope :food_name, :protein, :cals
   before_filter :init_vars
 
   # GET /foods
