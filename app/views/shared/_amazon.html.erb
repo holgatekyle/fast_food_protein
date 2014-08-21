@@ -1,0 +1,41 @@
+<center>
+<h1>Best of Amazon</h1>
+<h3>Personally tested and approved great tasting, high protein Prime-eligible products.</h3>
+		<div class="table-responsive">
+		  <table id="amazon-table" class="tablesorter table-striped">
+		    <thead> 
+		    	<tr>
+		    		<th>Food Name</th>
+		    		<th>Calories</th>
+		    		<th>Protein/100 kcal</th>
+		    		<th>Protein</th>
+		    		<th>Carbs</th>
+		    		<th>Fats</th>
+		    		<th>Amazon Link</th>
+		    	</tr>
+		    </thead>
+		    <tbody>
+		    	 <% @amazon_list.each do |data| %>
+		      <tr>
+		      	<td class="left-text"><%= data[:food_name] %></td>
+		      	<td><%= data[:calories] %></td>
+		      	<td><%= (((data[:protein]*1.0)/data[:calories])*100).round(1) %></td>
+		      	<td><%= data[:protein] %></td>
+		      	<td><%= data[:carbs] %></td>
+		      	<td><%= data[:fat] %></td>
+		      	<td><a href="<%= data[:url] %>" target="_blank"> Check it Out! </a></td>
+		      </tr>
+		    <% end %>
+		    </tbody>
+		  </table>
+		</div>
+		<small>Some companies may list their calorie content lower to account for fiber content.</small>
+<script>
+	$(function(){
+	  $('#amazon-table').tablesorter(); 
+	});
+	
+	$('#show-column-link').click(function() {
+  $('#column_list').toggle();
+});
+</script>

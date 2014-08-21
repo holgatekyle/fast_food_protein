@@ -4,6 +4,7 @@ BestFood::Application.routes.draw do
   resources :foods
   match '/search',   to: 'foods#search',   via: 'get'
   match '/restaurant',   to: 'foods#restaurant',   via: 'get'
+  match '/amazon',   to: 'foods#amazon',   via: 'get'
   root 'foods#index'
   
   get 'r/:id' => 'foods#restaurant'

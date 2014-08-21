@@ -40,6 +40,10 @@ class FoodsController < ApplicationController
     @grid_foods = Food.all_solid_foods(@show_breakfast).companies(@company_name)
     
   end
+  
+  def amazon
+    
+  end
 
   private
   
@@ -51,6 +55,18 @@ class FoodsController < ApplicationController
       if params[:breakfast] == "1"
         @show_breakfast = true
       end
+      
+      @amazon_list = [{ food_name: 'Power Crunch Bars - Cookies and Creme', calories: 205, fat: 12, protein: 14, carbs: 10, url: 'http://www.amazon.com/gp/product/B000FRSSFC/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000FRSSFC&linkCode=as2&tag=fasfoopro-20&linkId=MO4MZBR2JB2HQYHN' },
+                      { food_name: 'Optimum Nutrition Whey Gold Standard', calories: 120, fat: 1, protein: 24, carbs: 2, url: 'http://www.amazon.com/gp/product/B000QSNYGI/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000QSNYGI&linkCode=as2&tag=fasfoopro-20&linkId=XQKJZSU2P4V2PIXU' },
+                      { food_name: 'Seapoint Farms Dry Roasted Edamame', calories: 130, fat: 4, protein: 14, carbs: 10, url: 'http://www.amazon.com/gp/product/B000G2UUOS/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000G2UUOS&linkCode=as2&tag=fasfoopro-20&linkId=KAZK2GOF4YRDPH3I' },
+                      { food_name: 'Nutiva Organic Hemp Protein', calories: 80, fat: 4, protein: 11, carbs: 12, url: 'http://www.amazon.com/gp/product/B0012C2GFM/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0012C2GFM&linkCode=as2&tag=fasfoopro-20&linkId=ECCVBKQIDVC7Q3I4' },
+                      { food_name: 'Kellogg''s Special K Cereal', calories: 120, fat: 1, protein: 10, carbs: 19, url: 'http://www.amazon.com/gp/product/B00CL52KQY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00CL52KQY&linkCode=as2&tag=fasfoopro-20&linkId=THRSM46WRQAW2FZG' },
+                      { food_name: 'Bell Plantation Powdered Peanut Butter', calories: 45, fat: 1.5, protein: 5, carbs: 5, url: 'http://www.amazon.com/gp/product/B009E7YBEQ/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B009E7YBEQ&linkCode=as2&tag=fasfoopro-20&linkId=DU4KCR3XCX5DEXCR' },
+                      { food_name: 'Jack Link''s Beef Jerky', calories: 80, fat: 1, protein: 15, carbs: 3, url: 'http://www.amazon.com/gp/product/B002OG1NUO/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B002OG1NUO&linkCode=as2&tag=fasfoopro-20&linkId=6KUWWRUGSFUGT664' },
+                      { food_name: 'Turkey Perky Jerky', calories: 50, fat: 0, protein: 9, carbs: 2, url: 'http://www.amazon.com/gp/product/B006OD008Y/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B006OD008Y&linkCode=as2&tag=fasfoopro-20&linkId=JUK6XW4VPFEASRUJ' }
+                      
+                      ]
+                      
     end
 
     def get_column_names
