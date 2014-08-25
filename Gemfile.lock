@@ -95,6 +95,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.10.1)
     multi_test (0.1.1)
+    newrelic_rpm (3.9.0.229)
     nokogiri (1.6.3.1-x86-mingw32)
       mini_portile (= 0.6.0)
     pg (0.15.1-x86-mingw32)
@@ -193,6 +194,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-tablesorter
+  newrelic_rpm
   pg (= 0.15.1)
   rails (= 4.0.4)
   rails_12factor
