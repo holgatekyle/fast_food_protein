@@ -98,3 +98,24 @@
   }
   cursor:pointer;
 }
+
+.btn-search-big-amazon {
+  @include btn-theme($flightBlue);
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  border: .094em solid;
+  border-radius: .625em;
+  box-shadow: 0 .375em .313em -.313em rgba(black,.8), inset 0 .063em $fwhite, inset 0 -.188em rgba(black,.15);
+  color: #FFF;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  @include trans(0.2s ease-in-out); 
+  text: {
+    transform: uppercase;
+    decoration: none;
+    shadow: 0 .063em rgba(black,.3);
+  }
+  cursor:pointer;
+}
