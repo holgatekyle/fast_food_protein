@@ -8,7 +8,12 @@ class FoodsController < ApplicationController
   end
   
   def search    
- 
+    @extra_columns_list = get_column_names
+    
+    if params[:extra_columns]
+      @extra_columns_selected = params[:extra_columns]
+    end    
+    
     #this block is for the user-filtered list
     if params[:company_list] #check if params are sent through
         @company_filter_list = params[:company_list][:list].reject!(&:empty?) #remove empty entries
@@ -51,9 +56,19 @@ class FoodsController < ApplicationController
       @home_page = false
       @extra_columns_selected = []
       @show_breakfast = false
+      @show_pc = false
+      @show_pf = false
       
       if params[:breakfast] == "1"
         @show_breakfast = true
+      end
+      
+      if params[:ptoc] == "1"
+        @show_pc = true
+      end
+      
+      if params[:ptof] == "1"
+        @show_pf = true
       end
       
       @amazon_list = [{ food_name: 'Power Crunch Bars - Cookies and Creme', calories: 205, fat: 12, protein: 14, carbs: 10, url: 'http://www.amazon.com/gp/product/B000FRSSFC/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000FRSSFC&linkCode=as2&tag=fasfoopro-20&linkId=MO4MZBR2JB2HQYHN' },
@@ -71,7 +86,7 @@ class FoodsController < ApplicationController
     end
 
     def get_column_names
-      return [['Carbs', 'carbs'],['Fats', 'fats']]
+      return [['Fiber', 'fiber'],['Sugars', 'sugars'],['Cholesterol', 'cholesterol'],['Sodium', 'sodium'],['Saturated Fat', 'sat_fat'],['Trans Fat', 'trans_fat']]
     end
 
 end

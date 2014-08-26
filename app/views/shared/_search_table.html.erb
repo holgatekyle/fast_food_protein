@@ -7,9 +7,15 @@
 		    		<th>Food Name</th>
 		    		<th>Calories</th>
 		    		<th>Protein/100 kcal</th>
+		    		<% if @show_pf %>
+		    			<th>Protein/fat</th>
+		    		<% end %>
+		    		<% if @show_pc %>
+		    			<th>Protein/carbs</th>
+		    		<% end %>
 		    		<th>Protein</th>
-		    		<th>Carbs</th>
 		    		<th>Fats</th>
+		    		<th>Carbs</th>
 		    		<% extra_columns_selected.each do |x|%>
 		    		<th><%= normalize_column_name(x) %></th>
 		    		<% end %>
@@ -22,9 +28,15 @@
 		      	<td class="left-text"><%= data.food_name.titleize %></td>
 		      	<td><%= data.calories %></td>
 		      	<td><%= (((data.protein*1.0)/data.calories)*100).round(1) %></td>
+		      	<% if @show_pf %>
+		    		<td><%= ((data.protein*1.0)/data.fat).round(2) %></td>
+		    	<% end %>
+		    	<% if @show_pc %>
+		    		<td><%= ((data.protein*1.0)/data.carbs).round(2) %></td>
+		    	<% end %>
 		      	<td><%= data.protein %></td>
-		      	<td><%= data.carbs %></td>
 		      	<td><%= data.fat %></td>
+		      	<td><%= data.carbs %></td>
 			      	<% extra_columns_selected.each do |q| %>
 			    		<td><%= data[q] %></td>
 			    	<% end %>
