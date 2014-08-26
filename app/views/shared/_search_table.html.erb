@@ -25,7 +25,7 @@
 		    	 <% grid_food.sort_by{|a| a["protein"]}.reverse.each do |data| %>
 		      <tr>
 		      	<td class="left-text"><%= data.company_name %></b></td>
-		      	<td class="left-text"><%= data.food_name.titleize %></td>
+		      	<td class="left-text"><%= data.food_name.titleize %><% if data.company_name =='Panera Bread' %> (<%= data.serving_size %>)<%end%></td>
 		      	<td><%= data.calories %></td>
 		      	<td><%= (((data.protein*1.0)/data.calories)*100).round(1) %></td>
 		      	<% if @show_pf %>
