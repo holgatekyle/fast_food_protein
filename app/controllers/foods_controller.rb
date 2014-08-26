@@ -63,7 +63,8 @@ class FoodsController < ApplicationController
                       { food_name: 'Kellogg''s Special K Cereal', calories: 120, fat: 1, protein: 10, carbs: 19, url: 'http://www.amazon.com/gp/product/B00CL52KQY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00CL52KQY&linkCode=as2&tag=fasfoopro-20&linkId=THRSM46WRQAW2FZG' },
                       { food_name: 'Bell Plantation Powdered Peanut Butter', calories: 45, fat: 1.5, protein: 5, carbs: 5, url: 'http://www.amazon.com/gp/product/B009E7YBEQ/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B009E7YBEQ&linkCode=as2&tag=fasfoopro-20&linkId=DU4KCR3XCX5DEXCR' },
                       { food_name: 'Jack Link''s Beef Jerky', calories: 80, fat: 1, protein: 15, carbs: 3, url: 'http://www.amazon.com/gp/product/B002OG1NUO/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B002OG1NUO&linkCode=as2&tag=fasfoopro-20&linkId=6KUWWRUGSFUGT664' },
-                      { food_name: 'Turkey Perky Jerky', calories: 50, fat: 0, protein: 9, carbs: 2, url: 'http://www.amazon.com/gp/product/B006OD008Y/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B006OD008Y&linkCode=as2&tag=fasfoopro-20&linkId=JUK6XW4VPFEASRUJ' }
+                      { food_name: 'Turkey Perky Jerky', calories: 50, fat: 0, protein: 9, carbs: 2, url: 'http://www.amazon.com/gp/product/B006OD008Y/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B006OD008Y&linkCode=as2&tag=fasfoopro-20&linkId=JUK6XW4VPFEASRUJ' },
+                      { food_name: 'Bumble Bee Wild Pink Salmon, Skinless & Boneless', calories: 60, fat: 1.5, protein: 14, carbs: 0, url: 'http://www.amazon.com/gp/product/B0025ULK66/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0025ULK66&linkCode=as2&tag=fasfoopro-20&linkId=SLCQ2H6CD62C6VKD' }
                       
                       ]
                       
