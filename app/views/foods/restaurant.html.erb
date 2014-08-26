@@ -2,9 +2,9 @@
 <div class="center container-fluid">	
 	<h1><%= @company_name %></h1>
 
-	<form id="form" action="" method="get">
-		<div class="row"><%= check_box_tag 'breakfast', 1, @show_breakfast%> Show Breakfast</div>
-	</form>
+	<div class="container">
+	<%= render partial: "shared/search_form", locals: {rest_list: false} %>	
+	</div>
 	
 	<script type="text/javascript">  
         $(function(){

@@ -1,7 +1,7 @@
 	<% provide(:title, 'Compare All') %>
 	<div class="center container-fluid">	
 	<h1>All Foods</h1>
-	<%= render "shared/search_form" %>	
+	<%= render partial: "shared/search_form", locals: {rest_list: true} %>	
 
 	<%= render partial: "shared/most_protein", locals: {most_protein: @grid_foods} %>
 

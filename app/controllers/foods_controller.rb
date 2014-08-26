@@ -36,13 +36,19 @@ class FoodsController < ApplicationController
       redirect_to("/r/"+@company_name)
    else
      @company_name ||= params[:id]
-   end  
+   end
+   
+    @extra_columns_list = get_column_names
+    
+    if params[:extra_columns]
+      @extra_columns_selected = params[:extra_columns]
+    end
     
     if !Food.is_company?(@company_name)
       redirect_to(root_path)
     end
     
-    @grid_foods = Food.all_solid_foods(@show_breakfast).companies(@company_name)
+    @grid_foods = apply_scopes(Food.all_solid_foods(@show_breakfast).companies(@company_name))
     
   end
   
