@@ -2,7 +2,9 @@ class Food < ActiveRecord::Base
   scope :companies, lambda{|company_names| where("company_name IN (?)", company_names )}
   scope :food_name, lambda{|food_name| where('lower(food_name) LIKE ?', '%'+food_name.downcase+'%' )}
   scope :protein, lambda{|protein| where('protein >= ?', protein )}
-  scope :cals, lambda{|cals| where('calories <= ?', cals )}
+  scope :max_cals, lambda{|max_cals| where('calories <= ?', max_cals )}
+  scope :max_carbs, lambda{|max_carbs| where('carbs <= ?', max_carbs )}
+  scope :max_fat, lambda{|max_fat| where('fat <= ?', max_fat )}
   
   #food_class keys-
   #  FD = food dinner, most food types
