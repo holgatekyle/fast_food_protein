@@ -31,8 +31,9 @@
 <div class="container main-box">
 	<%= yield %>
 
-<%= debug(params) if Rails.env.development? %>
+
 
 </div>
+<%= render 'shared/tip_footer' %>
 </body>
 </html>
