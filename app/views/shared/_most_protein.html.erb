@@ -6,7 +6,7 @@
 		<% most_protein.top_protein_cal(3).each do |f| %>
 		<tr>
 	        <td class="left-text"><%= f.company_name %> <%= f.food_name.titleize %></td>
-	        <td><span class="highlight-text"><%= f.p_100_ratio %> g</span></td>
+	        <td><span class="highlight-text"><%= fix_precision(f.p_100_ratio) %> g</span></td>
 	        <% end %>
 	</table>
 	
@@ -16,7 +16,7 @@
 		<% most_protein.top_protein(3).each do |f| %>
 		<tr>
 	        <td class="left-text"><%= f.company_name %> <%= f.food_name.titleize %></td>
-	        <td><span class="highlight-text"><%= f.protein %> g</span></td>
+	        <td><span class="highlight-text"><%= fix_precision(f.protein) %> g</span></td>
 	    </tr>
 	        <% end %>
 	    </table>

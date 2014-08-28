@@ -1,0 +1,273 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: horton; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE horton (
+    food_name character varying(255),
+    serving_size character varying(255),
+    calories numeric,
+    cals_from_fat integer,
+    fat numeric,
+    sat_fat_g numeric,
+    trans_fat numeric,
+    cholesterol integer,
+    sodium integer,
+    carbs numeric,
+    fiber numeric,
+    sugars numeric,
+    protein numeric,
+    vit_a numeric,
+    vit_c numeric,
+    calcium numeric,
+    iron numeric,
+    food_class character varying(255)
+);
+
+
+ALTER TABLE public.horton OWNER TO postgres;
+
+--
+-- Data for Name: horton; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY horton (food_name, serving_size, calories, cals_from_fat, fat, sat_fat_g, trans_fat, cholesterol, sodium, carbs, fiber, sugars, protein, vit_a, vit_c, calcium, iron, food_class) FROM stdin;
+BLT Sandwich	202g	360	\N	14	4	0	20	810	44	5	3	10	2	40	2	25	FD
+Chicken Salad Sandwich	252g	330	\N	9	1.5	0.1	30	950	45	5	3	20	2	50	2	25	FD
+Ham & Swiss Sandwich	262g	370	\N	11	5	0.2	50	1160	46	5	3	24	4	45	20	30	FD
+Turkey, Bacon Club Sandwich	264g	400	\N	11	4	0	50	1260	52	5	5	26	2	40	2	25	FD
+Bacon, Tomato & Cheese Panini	230g	600	\N	30	10	0.3	40	1390	62	7	4	26	10	8	20	25	FD
+Grilled Cheese Panini	174g	490	\N	18	9	0.4	45	1320	60	7	3	24	15	0	30	20	FD
+Tuscan Chicken Panini	274g	560	\N	21	6	0.3	75	1470	62	7	5	34	8	10	15	25	FD
+BBQ Chicken Wrap Snacker	123g	190	\N	4.5	0.5	0	25	630	25	3	4	12	0	8	2	8	FD
+Chicken Ranch Wrap Snacker	123g	190	\N	6	1	0	25	620	22	3	1	12	0	6	4	8	FD
+Chicken Salad Wrap Snacker	103g	190	\N	7	1	0.1	20	540	22	3	1	10	2	4	2	8	FD
+Biscuit, Bacon, Egg, Cheese	152g	410	\N	22	13	0.4	175	1030	34	2	4	19	10	0	15	20	FB
+Biscuit, Bacon, Egg White, Cheese	152g	360	\N	17	11	0.3	25	930	33	2	3	18	8	0	10	20	FB
+Biscuit, Sausage, Egg, Cheese	177g	490	\N	31	16	0.4	190	1130	34	2	4	20	10	0	15	20	FB
+Biscuit, Sausage, Egg White, Cheese	177g	430	\N	26	14	0.3	40	1030	32	2	3	19	6	0	10	15	FB
+Biscuit, Egg, Cheese	140g	350	\N	17	11	0.4	165	890	34	2	4	15	10	0	15	20	FB
+Biscuit, Egg White, Cheese	140g	300	\N	12	9	0.3	15	790	32	2	3	14	6	0	10	15	FB
+English Muffin, Bacon, Egg, Cheese	139g	330	\N	15	7	0.3	175	750	30	1	3	17	10	0	20	15	FB
+English Muffin, Bacon, Egg White, Cheese	139g	280	\N	10	5	0.2	25	640	29	1	2	17	6	0	15	10	FB
+English Muffin, Sausage, Egg, Cheese	164g	410	\N	24	10	0.3	190	850	30	1	3	19	10	0	20	15	FB
+English Muffin, Sausage, Egg White, Cheese	164g	360	\N	19	8	0.2	40	740	29	1	2	18	4	0	15	10	FB
+English Muffin, Egg, Cheese	127g	270	\N	10	5	0.3	165	610	30	1	3	13	10	0	20	15	FB
+English Muffin, Egg White, Cheese	127g	220	\N	5	3.5	0.2	15	500	29	1	2	13	4	0	15	10	FB
+Multigrain Flatbread, Bacon, Egg, Cheese	132g	330	\N	17	7	0.2	175	830	28	4	4	18	10	10	20	15	FB
+Multigrain Flatbread, Bacon, Egg White, Cheese	132g	280	\N	12	5	0.2	25	720	27	4	3	17	6	10	10	15	FB
+Multigrain Flatbread, Sausage, Egg, Cheese	157g	410	\N	26	10	0.2	190	930	28	4	4	19	35	10	15	20	FB
+Multigrain Flatbread, Sausage, Egg White, Cheese	157g	350	\N	21	9	0.2	40	820	26	4	3	18	4	10	10	10	FB
+Sausage, Egg, Cheese	147g	390	\N	26	9	0.2	185	860	24	3	1	17	8	0	15	10	FB
+Bacon, Egg, Cheese	122g	310	\N	17	6	0.2	175	760	24	3	1	15	8	0	15	10	FB
+Egg, Cheese 	110g	250	\N	12	4	0.2	160	620	24	3	1	12	8	0	15	10	FB
+Hash Brown 	54g	120	\N	7	0.5	0.1	0	320	16	1	0	1	0	2	2	2	FB
+Oatmeal - Maple 	308g	220	\N	2.5	0.5	0	0	220	49	4	20	5	0	0	4	15	FB
+Oatmeal - Mixed Berries 	327g	210	\N	3	0.5	0	0	220	44	6	14	6	0	10	4	15	FB
+Bagel BELT (Plain Bagel) 	263g	500	\N	17	7	0.2	175	1110	65	3	6	23	10	15	20	30	FB
+Sausage Bagel BELT (Plain Bagel) 	288g	570	\N	26	10	0.2	190	1210	65	3	6	24	10	15	20	30	FB
+Sausage and Biscuit 	107g	350	\N	22	11	0.2	25	660	29	2	3	11	2	0	2	15	FB
+Apple Fritter 	95g	290	\N	8	3.5	0	0	330	48	2	15	7	0	4	4	15	FDI
+Blueberry Fritter 	107g	310	\N	7	3	0.1	0	360	55	1	21	7	0	0	2	15	FDI
+Caramel Apple Fritter 	103g	300	\N	8	3.5	0	0	390	52	2	17	7	0	4	4	15	FDI
+Chocolate Dip Donut	60g	190	\N	6	2.5	0	0	210	31	1	10	4	0	0	2	10	FDI
+Dutchie Donut	72g	230	\N	6	3	0	0	200	38	1	15	5	0	0	2	15	FDI
+Game Day (Vanilla Dip) Donut	75g	250	\N	6	2.5	0	0	210	46	1	24	4	0	0	2	10	FDI
+Honey Dip Donut	62g	190	\N	6	2.5	0	0	210	31	1	11	4	0	0	2	10	FDI
+Maple Dip Donut	60g	190	\N	6	2.5	0	0	210	31	1	11	4	0	0	2	10	FDI
+Vanilla Dip with Coloured Sprinkles Donut	75g	250	\N	6	2.5	0	0	210	46	1	24	4	0	0	2	10	FDI
+Chocolate Glazed Donut	76g	280	\N	14	6	0.1	5	320	37	1	19	4	0	0	2	15	FDI
+Chocolate Mint Donut	73g	280	\N	14	6	0.1	5	320	36	1	17	4	0	0	2	15	FDI
+Chocolate Peanut Crunch Donut	74g	300	\N	17	7	0.1	5	320	32	2	13	5	0	0	2	15	FDI
+Chocolate Toasted Coconut Donut	80g	310	\N	16	9	0.1	5	330	39	2	20	4	0	0	2	15	FDI
+Chocolate White Coconut Donut	80g	320	\N	18	10	0.1	5	340	38	2	18	4	0	0	2	15	FDI
+Cinnamon Sugar Donut	60g	220	\N	10	5	0.1	15	270	28	1	10	3	0	0	4	10	FDI
+Double Chocolate Donut	70g	270	\N	14	6	0.1	5	320	35	1	16	4	0	0	2	15	FDI
+Old Fashion Dip Donut	68g	250	\N	10	5	0.1	15	270	36	1	17	3	0	0	4	10	FDI
+Old Fashion Glazed Donut	77g	270	\N	10	5	0.1	15	270	41	1	23	3	0	0	4	10	FDI
+Old Fashion Plain Donut	58g	210	\N	10	5	0.1	15	260	25	1	8	3	0	0	4	10	FDI
+Old Fashion Sugar Donut	65g	240	\N	10	5	0.1	15	270	33	1	15	3	0	0	4	10	FDI
+Peanut Crunch Donut	79g	300	\N	14	5	0.1	15	270	39	1	20	5	0	0	4	10	FDI
+Sour Cream Cinnamon Donut	60g	270	\N	16	8	0.1	10	210	29	1	12	3	0	0	4	8	FDI
+Sour Cream Glazed Donut	81g	340	\N	16	8	0.1	10	220	46	1	29	3	0	0	2	8	FDI
+Sour Cream Plain Donut	58g	270	\N	16	8	0.1	10	210	27	1	11	3	0	0	2	8	FDI
+Sour Cream Sugar Donut	63g	290	\N	16	8	0.1	10	220	33	1	16	3	0	0	2	8	FDI
+Toasted Coconut Donut	79g	290	\N	13	7	0.1	15	280	40	1	22	4	0	0	4	10	FDI
+White Coconut Donut	79g	300	\N	14	8	0.1	15	280	39	2	20	4	0	0	4	10	FDI
+Banana Cream Donut	74g	190	\N	6	2.5	0	0	250	31	1	9	4	0	0	2	10	FDI
+Blueberry Donut	74g	200	\N	5	2	0	0	230	34	1	12	4	0	0	2	10	FDI
+Boston Cream Donut	81g	220	\N	6	2.5	0	0	250	37	1	15	5	0	0	2	10	FDI
+Canadian Maple Donut	81g	210	\N	6	2.5	0	0	250	37	1	16	5	0	0	2	10	FDI
+Cherry Donut	74g	200	\N	6	2.5	0	0	210	33	1	11	5	0	0	2	10	FDI
+Lemon Donut	74g	190	\N	5	2.5	0.1	0	220	31	1	10	4	0	0	2	10	FDI
+Raspberry Donut	74g	200	\N	5	2	0	0	220	33	1	12	4	0	0	2	10	FDI
+Spiced Apple Donut	74g	190	\N	5	2.5	0	0	220	32	1	11	4	0	0	2	10	FDI
+Strawberry Donut	74g	200	\N	5	2	0	0	230	34	1	14	5	0	0	2	15	FDI
+Strawberry Bloom Donut	75g	230	\N	7	3.5	0	0	180	39	1	18	4	0	2	2	10	FDI
+Strawberry Vanilla Donut	94g	270	\N	5	2	0	0	230	52	1	31	5	0	0	2	15	FDI
+Venetian Cream Donut	74g	190	\N	6	2.5	0	0	250	30	1	9	5	0	0	2	10	FDI
+Game Day Supreme Donut	93g	260	\N	6	2.5	0	0	250	48	1	25	5	0	0	2	10	FDI
+Honey Cruller Donut	81g	310	\N	18	9	0.3	50	200	37	0	22	2	0	0	2	2	FDI
+Long John Donut	78g	250	\N	7	3	0	0	220	43	1	15	5	0	0	2	15	FDI
+Walnut Crunch Donut	80g	360	\N	22	10	0.1	5	340	38	2	20	4	0	0	2	15	FDI
+Caramel Chocolate Pecan Cookie	52g	250	\N	12	6	0.4	30	280	32	1	16	3	0	0	2	10	FDI
+Chocolate Chunk Cookie	52g	240	\N	10	6	0.4	25	250	34	1	19	3	0	0	2	15	FDI
+Ginger Molasses Cookie	53g	210	\N	7	4.5	0.2	35	150	35	1	19	2	6	0	4	10	FDI
+Oatcakes Cookie	37g	180	\N	9	3.5	0.1	0	190	22	2	10	2	0	0	0	8	FDI
+Oatmeal Raisin Spice Cookie	52g	210	\N	8	4.5	0.1	20	190	32	1	19	3	8	0	2	8	FDI
+Peanut Butter Cookie	52g	280	\N	17	8	0.4	25	240	27	2	16	6	0	0	2	8	FDI
+Smile Cookie Cookie	56g	250	\N	10	6	0.4	25	250	38	1	22	3	0	0	2	15	FDI
+Trail Mix with Fruit and Nuts Cookie	52g	220	\N	8	3	0.1	10	170	34	4	20	4	2	2	2	10	FDI
+Triple Chocolate Cookie	52g	230	\N	12	7	0.1	25	200	29	2	19	2	10	0	2	15	FDI
+White Chocolate Macadamia Nut Cookie	52g	250	\N	13	7	0.4	25	250	32	1	16	3	0	0	2	8	FDI
+Coffee (Black) 	286mL	0	\N	0	0	0	0	0	0	0	0	0	0	0	0	0	D
+Coffee (1 Cream, 1 Sugar) 	286mL	70	\N	3.5	2	0.1	15	20	9	0	9	1	2	0	4	0	D
+Decaffeinated Coffee 	286mL	0	\N	0	0	0	0	0	0	0	0	0	0	0	0	0	D
+Tea (Black) 	286mL	0	\N	0	0	0	0	0	0	0	0	0	0	0	0	0	D
+Tea (1 Milk, 1 Sugar) 	286mL	40	\N	0.4	0.3	0	0	10	8	0	8	1	0	0	2	0	D
+Hot Chocolate 	286mL	240	\N	6	5	0.2	0	320	45	2	38	2	0	0	2	15	D
+White Hot Chocolate 	286mL	260	\N	9	9	0	0	250	42	0	35	1	0	0	15	2	D
+Apple Cider 	286mL	210	\N	0	0	0	0	5	52	0	52	0	0	0	0	0	D
+Latte 	286mL	80	\N	0.2	0.1	0	5	120	12	0	11	8	0	2	25	0	D
+Flavoured Latte 	286mL	100	\N	0.2	0.1	0	5	115	19	0	18	7	0	2	25	0	D
+Chocolate Latte 	286mL	180	\N	6	5	0.3	5	135	24	0	22	6	0	2	20	2	D
+Tea Latte 	286mL	50	\N	0.1	0.1	0	5	80	7	0	7	5	0	2	20	0	D
+Cappuccino 	286mL	60	\N	0.2	0.1	0	5	95	10	0	9	6	0	2	20	0	D
+French Vanilla Cappuccino 	286mL	250	\N	8	7	0.1	5	210	41	1	31	4	0	0	10	2	D
+English Toffee Cappuccino 	286mL	240	\N	7	6	0.1	5	180	41	2	30	4	0	0	15	8	D
+Cafй Mocha 	286mL	190	\N	8	7	0.3	0	170	29	1	24	1	0	0	0	10	D
+Americano 	286mL	4	\N	0	0	0	0	10	1	0	0	0.3	0	0	0	0	D
+Iced Capp™ (Cream) 	286mL	250	\N	11	6	0.4	45	50	33	0	33	2	8	0	10	2	D
+Iced Capp™ (Milk) 	286mL	150	\N	1.5	1	0	5	35	32	0	32	3	2	0	8	2	D
+Iced Capp™ (Chocolate Milk) 	286mL	160	\N	0.5	0.4	0	5	60	36	0	36	3	2	0	6	2	D
+Flavoured Iced Capp™ (Cream) 	286mL	250	\N	11	6	0.4	45	50	34	0	33	2	8	0	10	2	D
+Iced Coffee (Cream) 	286mL	110	\N	6	3.5	0.2	25	55	12	0	8	1	4	0	6	0	D
+Iced Coffee (Milk) 	286mL	70	\N	1	0.5	0	5	55	12	0	8	2	2	0	8	0	D
+Iced Coffee (Chocolate Milk) 	286mL	80	\N	0.5	0.3	0	0	80	16	0	11	2	2	0	6	0	D
+Flavoured Iced Coffee (Cream) 	286mL	110	\N	6	3.5	0.2	25	55	13	0	8	1	4	0	6	0	D
+Iced Latte 	286mL	90	\N	2	1	0	5	75	14	0	14	4	4	0	10	0	D
+Flavoured Iced Latte 	286mL	90	\N	2	1	0	5	75	15	0	14	4	4	0	10	0	D
+Iced Chocolate Latte 	286mL	180	\N	6	6	0.2	5	100	26	1	22	4	4	0	10	6	D
+Mocha Iced Capp	286mL	290	\N	11	7	0.4	45	60	42	0	38	2	8	0	10	6	D
+Mocha Iced Coffee	286mL	150	\N	6	3.5	0.2	25	70	20	0	13	2	4	0	6	6	D
+Mixed Berry Fruit Smoothie with Yogurt 	286mL	150	\N	1	0.5	0	5	40	35	1	32	2	0	0	6	2	D
+Mixed Berry Fruit Smoothie without Yogurt 	286mL	130	\N	0	0	0	0	10	33	1	30	0	0	0	2	2	D
+Strawberry Banana Fruit Smoothie with Yogurt 	286mL	150	\N	1	0.5	0	5	35	34	0	31	2	0	0	6	0	D
+Strawberry Banana Fruit Smoothie without Yogurt 	286mL	130	\N	0	0	0	0	10	33	0	30	0	0	0	2	0	D
+Frozen Lemonade 	286mL	120	\N	0.1	0	0	0	10	28	0	26	0	0	2	0	0	D
+Apple Fritter Timbit	17g	50	\N	1.5	1	0	0	40	9	0	4	1	0	0	0	2	FDI
+Dutchie Timbit	16g	50	\N	1.5	1	0	0	35	9	0	4	1	0	0	0	2	FDI
+Honey Dip Timbit	14g	45	\N	1	0.5	0	0	30	8	0	4	1	0	0	0	2	FDI
+Chocolate Glazed Timbit	19g	70	\N	3	1.5	0	0	85	10	0	5	1	0	0	0	4	FDI
+Chocolate Peanut Crunch Timbit	21g	80	\N	4	1.5	0	0	85	10	1	5	1	0	0	0	4	FDI
+Chocolate Toasted Coconut Timbit	21g	80	\N	4	2	0	0	85	10	0	5	1	0	0	0	4	FDI
+Chocolate White Coconut Timbit	21g	80	\N	4	2.5	0	0	85	10	1	5	1	0	0	0	4	FDI
+Cinnamon Sugar Timbit	16g	60	\N	2.5	1	0	5	75	8	1	3	1	0	0	0	2	FDI
+Honey Cruller Timbit	15g	60	\N	3	1.5	0.1	10	35	8	0	5	0	0	0	0	0	FDI
+Old Fashion Glazed Timbit	19g	70	\N	2.5	1	0	5	75	10	0	5	1	0	0	0	2	FDI
+Old Fashion Plain Timbit	15g	50	\N	2.5	1	0	5	75	7	0	2	1	0	0	0	2	FDI
+Old Fashion Sugar Timbit	16g	60	\N	2.5	1	0	5	75	8	0	3	1	0	0	0	2	FDI
+Peanut Crunch Timbit	21g	80	\N	3.5	1	0	5	75	11	1	5	1	0	0	0	2	FDI
+Sour Cream Cinnamon Timbit	17g	80	\N	4.5	2	0	5	55	8	0	4	1	0	0	0	2	FDI
+Sour Cream Glazed Timbit	21g	90	\N	4.5	2	0	5	55	12	0	7	1	0	0	0	2	FDI
+Sour Cream Plain Timbit	15g	70	\N	4.5	2	0	5	55	7	0	3	1	0	0	0	2	FDI
+Sour Cream Sugar Timbit	17g	70	\N	4.5	2	0	5	55	8	0	4	1	0	0	0	2	FDI
+Toasted Coconut Timbit	20g	70	\N	3.5	1.5	0	5	75	11	1	6	1	0	0	0	2	FDI
+White Coconut Timbit	20g	80	\N	3.5	2	0	5	75	11	1	5	1	0	0	0	2	FDI
+Lemon Timbit	18g	45	\N	1	0.5	0	0	35	7	0	3	1	0	0	0	2	FDI
+Raspberry Timbit	18g	45	\N	1	0.5	0	0	35	8	0	4	1	0	0	0	2	FDI
+Spiced Apple Timbit	18g	45	\N	1	0.5	0	0	30	8	0	3	1	0	0	0	2	FDI
+Strawberry Timbit	18g	50	\N	1	0.5	0	0	35	8	0	4	1	0	0	0	2	FDI
+Venetian Cream Timbit	18g	45	\N	1.5	0.5	0	0	40	7	0	2	1	0	0	0	2	FDI
+Blueberry Muffin	115g	330	\N	11	2	0.2	40	460	54	2	25	5	0	0	4	15	FDI
+Chocolate Chip Muffin	115g	410	\N	16	5	0.3	35	430	62	2	36	5	0	0	4	15	FDI
+Cranberry Blueberry Bran Muffin	115g	280	\N	13	2	0.3	20	410	53	4	24	5	0	2	4	20	FDI
+Fruit Explosion Muffin	122g	350	\N	11	2	0.2	35	460	57	2	27	5	0	4	4	15	FDI
+Lemon Poppyseed Muffin	115g	390	\N	16	3.5	0.3	40	450	56	1	26	6	2	0	6	15	FDI
+Low Fat Double Berry Muffin	115g	290	\N	2.5	0.5	0.1	0	500	59	2	30	4	0	2	4	8	FDI
+Oatmeal Raisin Nut Muffin	115g	390	\N	14	2.5	0.2	20	370	59	3	24	6	0	0	4	15	FDI
+Raisin Bran Muffin	115g	370	\N	12	2	0.2	20	370	64	4	37	5	0	0	4	20	FDI
+Strawberry Sensation Muffin	122g	360	\N	11	2	0.2	35	520	57	1	27	5	0	8	4	15	FDI
+Triple Chocolate Muffin	115g	400	\N	15	5	0.3	30	380	63	2	38	5	0	0	4	20	FDI
+Whole Grain Blueberry Muffin	115g	350	\N	14	2.5	0.3	20	430	53	5	24	5	0	0	4	20	FDI
+Whole Grain Carrot Orange Muffin	115g	360	\N	13	2	0.2	25	390	57	4	29	5	45	4	4	15	FDI
+Whole Grain Raspberry Muffin	115g	380	\N	15	3.5	0.3	25	430	55	4	26	5	0	2	6	15	FDI
+Cheddar Cheese Bagel	85g	210	\N	3	1	0	5	450	40	2	2	9	2	0	8	20	FDI
+Cinnamon Raisin Bagel	113g	300	\N	2	0.3	0	0	390	63	3	11	9	0	0	6	25	FDI
+Everything Bagel	113g	300	\N	3.5	0.5	0	0	490	57	2	3	10	0	0	8	25	FDI
+Onion Bagel	113g	290	\N	2	0.3	0	0	490	59	2	4	10	0	0	6	25	FDI
+Plain Bagel	113g	290	\N	2	0.3	0	0	490	58	2	4	10	0	0	4	25	FDI
+Sesame Seed Bagel	113g	300	\N	3.5	0.5	0	0	480	57	3	4	10	0	0	8	25	FDI
+12 Grain Bagel	113g	350	\N	9	1	0	0	530	55	6	7	11	0	0	8	30	FDI
+Wheat ‘N Honey Bagel	113g	290	\N	3	0.5	0	0	490	58	5	7	10	0	0	4	35	FDI
+Jalapeno Asiago Mozzarella Bagel	123g	310	\N	3.5	1.5	0.1	5	730	58	3	2	12	2	0	10	30	FDI
+Maple Cinamon French Toast Bagel	123g	350	\N	4	1.5	0.2	5	540	67	2	15	10	0	0	8	25	FDI
+Sundried Tomato Asiago Parm Bagel	123g	320	\N	4.5	2	0.1	5	860	59	3	4	12	2	0	15	30	FDI
+Plain Cream Cheese Spread 	43g	140	\N	14	9	0.5	50	180	2	0	2	3	15	0	6	0	C
+Light Plain Cream Cheese Spread 	43g	100	\N	8	5	0.2	30	220	2	0	2	4	10	0	4	0	C
+Light Strawberry Cream Cheese Spread 	43g	100	\N	6	4	0.2	25	175	8	0	7	3	8	2	4	0	C
+Herb and Garlic Cream Cheese Spread 	43g	140	\N	13	8	0.4	50	230	2	0	2	3	15	0	6	0	C
+Cinnamon Roll - Chocolate 	107g	420	\N	22	11	0.2	0	350	52	2	16	4	2	0	4	20	C
+Cinnamon Roll - Frosted 	117g	460	\N	24	11	0.2	0	370	58	2	22	4	2	0	4	20	FDI
+Cinnamon Roll - Glazed 	105g	410	\N	22	11	0.2	0	340	49	2	14	4	2	0	4	20	FDI
+Croissant - Cheese 	75g	310	\N	17	8	0.2	5	330	30	1	3	7	2	0	6	15	FDI
+Croissant - Plain 	68g	280	\N	15	6	0.1	0	280	30	1	3	6	0	0	2	15	FDI
+Danish - Blueberry 	112g	380	\N	16	7	0.1	0	280	52	2	23	6	0	0	4	15	FDI
+Danish - Caramel Apple 	99g	290	\N	16	7	0.1	0	280	32	1	21	5	0	0	4	15	FDI
+Danish - Cherry Cheese 	107g	370	\N	16	6	0.1	0	310	50	1	24	5	0	0	4	10	FDI
+Danish - Chocolate 	97g	450	\N	25	9	0.1	0	230	52	3	22	7	0	0	2	35	FDI
+Danish - Maple Pecan 	103g	400	\N	19	6	0.1	0	270	53	2	21	7	0	0	2	15	FDI
+Homestyle Biscuit 	70g	210	\N	8	6	0.2	0	420	29	2	3	6	2	0	2	15	FDI
+Strudel - Apple 	50g	150	\N	8	3	0	0	130	18	1	6	2	0	0	0	4	FDI
+Strudel - Strawberry Cheese 	50g	160	\N	9	3.5	0	5	140	18	1	6	2	2	2	0	4	FDI
+Tea Biscuit - Cheese 	90g	300	\N	14	5	0.3	15	660	36	1	5	9	4	0	10	15	FDI
+Tea Biscuit - Ham & Cheese 	90g	290	\N	13	4.5	0.3	15	690	34	1	5	9	2	0	10	15	FDI
+Tea Biscuit - Plain 	76g	240	\N	9	1.5	0.1	0	560	35	1	5	5	0	0	2	15	FDI
+Tea Biscuit - Raisin 	90g	280	\N	9	1.5	0.1	0	550	46	2	15	6	0	0	4	20	FDI
+Creamy Vanilla Yogurt with Berries 	170g	160	\N	2	1.5	0	10	45	33	2	25	4	2	20	10	2	FDI
+Strawberry Yogurt with Berries 	170g	140	\N	2.5	1.5	0	10	50	27	2	20	4	2	20	10	2	FDI
+Chili 	284mL	290	\N	16	7	0	60	1180	20	5	5	18	4	10	8	25	FD
+Beef Noodle Soup 	284mL	130	\N	1	0.4	0.1	5	820	24	2	7	6	6	25	2	8	FDSo
+Cauliflower Cheese Soup 	284mL	170	\N	12	7	0.5	40	850	12	1	2	6	20	20	15	4	FDSo
+Chicken Noodle Soup 	284mL	110	\N	1.5	0.5	0	10	650	19	1	5	5	6	8	2	4	FDSo
+Clam Chowder 	284mL	190	\N	7	2	0.2	20	680	23	1	6	9	4	25	15	15	FDSo
+Cream of Broccoli Soup 	284mL	150	\N	7	2.5	0.2	10	680	16	2	6	6	25	25	15	4	FDSo
+Creamy Field Mushroom Soup 	284mL	150	\N	3	2	0	0	650	29	1	3	2	0	0	2	4	FDSo
+Creamy Sundried Tomato Soup 	284mL	210	\N	13	7	0.5	40	740	19	1	8	5	8	10	15	10	FDSo
+French Onion Soup 	284mL	230	\N	9	4.5	0.2	20	960	26	1	6	10	6	2	20	8	FDSo
+Hearty Potato Bacon Soup 	284mL	230	\N	13	6	0.2	30	760	22	1	5	6	15	2	10	4	FDSo
+Hearty Vegetable Soup 	284mL	80	\N	0.4	0.1	0	0	590	14	2	3	4	25	20	4	6	FDSo
+Italian Wedding Soup 	284mL	160	\N	3	1.5	0.1	5	650	28	1	7	4	4	2	2	8	FDSo
+Minestrone Soup 	284mL	120	\N	1	0.5	0	5	660	25	3	8	4	6	8	6	6	FDSo
+Split Pea with Ham Soup 	284mL	150	\N	1.5	0.5	0	5	680	26	2	7	7	4	4	4	8	FDSo
+Tomato Whole Grain Pasta Soup 	284mL	140	\N	1	0	0	0	750	29	2	5	4	4	25	4	6	FDSo
+Turkey and Wild Rice Soup 	284mL	120	\N	1	0.3	0	5	650	23	1	4	5	2	10	2	2	FDSo
+Mini Whole Wheat Buns 	50g	110	\N	0.5	0	0	0	240	21	2	0	4	0	0	0	10	FDI
+Regular White Buns 	105g	210	\N	1	0.2	0	0	450	42	2	1	7	0	6	0	25	FDI
+Regular Whole Wheat Buns 	105g	200	\N	1	0.2	0	0	430	40	4	1	8	0	25	0	20	FDI
+Garden Vegetable Sandwich	\N	320	\N	10	6	0.3	35	690	46	5	5	13	\N	\N	\N	\N	FD
+Extreme Italian Sandwich	\N	700	\N	39	16	0.3	105	2210	52	3	7	36	\N	\N	\N	\N	FD
+Crispy Chicken Sandwich	\N	450	\N	16	1.5	0.4	55	1080	56	3	4	22	\N	\N	\N	\N	FD
+\.
+
+
+--
+-- PostgreSQL database dump complete
+--
+
