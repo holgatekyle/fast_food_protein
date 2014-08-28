@@ -47,11 +47,11 @@
 		</div>
 		
 <script>
-	$(function(){
-	  $('#allfoods').tablesorter(); 
-	});
-	
-	$('#show-column-link').click(function() {
-  $('#column_list').toggle();
-});
+	$(document).ready( function () {
+    $('#allfoods').DataTable( {
+    	"pageLength": 25,
+    	"order": [[ 3, "desc" ]]
+    	}	
+    );
+} );
 </script>
