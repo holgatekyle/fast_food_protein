@@ -27,6 +27,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=686297404791709&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	<%= render 'shared/navbar' %>
 <% if !@home_page%>
 <% else %>
@@ -34,6 +42,8 @@
 <% end %>
 <div class="container col-md-10 col-md-offset-1 main-box">
 	<%= yield %>
+	
+	<div class="row"><center><span class="fb-share-button fb-share-shim" data-href="http://www.fastfoodprotein.com/"></span></center></div>
 </div>
 <%= render 'shared/tip_footer' %>
 </body>
