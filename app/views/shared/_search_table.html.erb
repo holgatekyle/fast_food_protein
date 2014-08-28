@@ -26,7 +26,7 @@
 		      <tr>
 		      	<td class="left-text"><%= data.company_name %></b></td>
 		      	<td class="left-text"><%= data.food_name.titleize %><%if ['Panera Bread', 'Chipotle'].include? data.company_name and !data.serving_size.blank?%> (<%= data.serving_size %>)<%end%></td>
-		      	<td><%= data.calories %></td>
+		      	<td><%= fix_precision(data.calories) %></td>
 		      	<td><%= (((data.protein*1.0)/data.calories)*100).round(1) %></td>
 		      	<% if @show_pf %>
 		    		<td><%= ((data.protein*1.0)/data.fat).round(2) %></td>
@@ -34,11 +34,11 @@
 		    	<% if @show_pc %>
 		    		<td><%= ((data.protein*1.0)/data.carbs).round(2) %></td>
 		    	<% end %>
-		      	<td><%= data.protein %></td>
-		      	<td><%= data.fat %></td>
-		      	<td><%= data.carbs %></td>
+		      	<td><%= fix_precision(data.protein) %></td>
+		      	<td><%= fix_precision(data.fat) %></td>
+		      	<td><%= fix_precision(data.carbs) %></td>
 			      	<% extra_columns_selected.each do |q| %>
-			    		<td><%= data[q] %></td>
+			    		<td><%= fix_precision(data[q]) %></td>
 			    	<% end %>
 		      </tr>
 		    <% end %>
