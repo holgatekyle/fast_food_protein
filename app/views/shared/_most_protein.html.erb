@@ -1,7 +1,7 @@
-<div class="container-fluid">
-<center>
-	
+<div class="center container-fluid most-protein">
+	<div class="col-md-4 col-md-offset-2 center">
 	<h3>Best Protein/100 kcal Ratio:</h3>
+	<center>
 	<table>
 		<% most_protein.top_protein_cal(3).each do |f| %>
 		<tr>
@@ -9,9 +9,11 @@
 	        <td><span class="highlight-text"><%= fix_precision(f.p_100_ratio) %> g</span></td>
 	        <% end %>
 	</table>
-	
-	<h3 class="shape">Most Protein:</h3>
-		
+	</center>
+	</div>
+	<div class="col-md-4 center">
+	<h3>Most Protein:</h3>
+		<center>
 	<table>
 		<% most_protein.top_protein(3).each do |f| %>
 		<tr>
@@ -20,5 +22,7 @@
 	    </tr>
 	        <% end %>
 	    </table>
-</center>
+	    </center>
+	    </div>
+
 </div>

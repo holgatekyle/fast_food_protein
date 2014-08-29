@@ -1,5 +1,13 @@
 @import "variables";
 
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 @mixin btn-theme($btn-color) {
   border-color: darken($btn-color, 20%);
   background-color: $btn-color;
@@ -27,9 +35,10 @@
 }
 
 .search-form-select-list-big{
-  margin: 25px;
+  margin-top: 45px;
+  margin-bottom: 15px;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 600;
   font-style: italic !important;
 }
@@ -49,9 +58,6 @@
   width: 200px;
 }
 
-.search-criteria{
-
-}
 
 .highlight-text{
   color: $fpink;
@@ -61,6 +67,7 @@
   @include btn-theme($flightBlue);
   display: inline-block;
   margin-top: 10px; 
+  margin-bottom: 10px; 
   padding: 7px;
   border: .094em solid;
   border-radius: .625em;
@@ -68,7 +75,7 @@
   color: #FFF;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   @include trans(0.2s ease-in-out); 
   text: {
     transform: uppercase;

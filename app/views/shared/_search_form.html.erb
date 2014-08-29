@@ -8,7 +8,7 @@
 	  	  </div>
   	  <% end %>
 	  	  <div class="col-md-4 <% if !rest_list %> col-md-offset-2<% end %>">
-	  	  <div class="row"><h4><%= label_tag(:company_name, "Filters:") %></h4></div>
+	  	  <div class="row"><h4><%= label_tag(:company_name, "Nutrition Filters:") %></h4></div>
 	  	  <div class="row"><span title="Food Name"><%= text_field_tag :food_name, params[:food_name], placeholder: "Food Name", class: "search-form-text-field" %></div>
 	  	  <div class="row"><span title="Minimum Protein (g)"><%= text_field_tag :protein, params[:protein], placeholder: "Minimum Protein (g)", class: "search-form-text-field" %></span></div>
 	  	  <div class="row"><span title="Maximum Calories"><%= text_field_tag :max_cals, params[:max_cals], placeholder: "Maximum Calories", class: "search-form-text-field" %></span></div>

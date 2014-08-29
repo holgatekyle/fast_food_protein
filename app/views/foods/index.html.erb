@@ -1,16 +1,13 @@
-<% provide(:title, 'The Fastest Way to Compare Fast Food Protein') %>
+<% provide(:title, 'The Fastest Way to Compare Fast Food Protein and Nutrition') %>
 <div class="home_page center container-fluid">	
 	
 	<h1>Fast Food Protein</h1>
-	<h4>To stay up to date with the newest restaurants and features, <a href="https://twitter.com/FastFoodProtein">follow @FastFoodProtein<span class="pink-txt"><i class="fa fa-twitter icon-shim fa-1x"></i></span>
-	</a>	or <a href="https://facebook.com/FastFoodProtein">Like us on Facebook<span class="pink-txt"><i class="fa fa-facebook icon-shim fa-1x"></i></spam>
-	</h4></a>
-	<div class="subtitle">Make smarter choices!
-		<br>Find the best <b>protein</b> and best <b>protein/calorie</b> ratio of the choices available to you.
-		<br>Compare multiple restaurants in one spot!</div>
+	<h2>Compare fast food nutrition the simple way!</h2>
+		<h3><br>Find the best options for <b>protein</b>, <b>calories</b>, <b>carbs</b>, <b>fats</b>, and more available to you.
+		<br>Compare nutrition from multiple restaurants in one spot!</h3>
 	
 	<div class="container-fluid">
-		<div class="col-md-12">
+		<div class="col-md-4">
 			<select id="company_name" name="company_name" class="search-form-select-list-big">
 			<option value="" disabled selected>Select A Restaurant</option>
 			<% Food.distinct_company_names.each do |name| %>
@@ -19,15 +16,11 @@
 			</select>
 		</div>
 		
-		<h2>or</h2>
-		
-		<div class="col-md-12">
+		<div class="col-md-4">
 			<form action="/search" method="get"><input class="btn-search-big" type="submit" value="Compare All" /></form>
 		</div>
 		
-		<h2>or</h2>
-		
-		<div class="col-md-12">
+		<div class="col-md-4">
 			<form action="/amazon" method="get"><input class="btn-search-big-amazon" type="submit" value="Check Amazon" /></form>
 		</div>
 		

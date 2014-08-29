@@ -32,17 +32,18 @@ p {
 
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 60px;
+  font-size: 75px;
   font-weight: 900;
   font-style: italic;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
   color: $fgold;
 }
 
 h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-style: italic;
+  font-family: 'Lato', sans-serif;
+  font-size: 45px;
+  font-weight: 300;
+
 }
 
 .subtitle {
@@ -53,8 +54,8 @@ h2 {
 }
 
 h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
+  font-family: 'Lato', serif;
+  font-size: 30px;
   font-style: italic;
 }
 
@@ -104,4 +105,6 @@ h4 {
   color: $flightBlue !important;
 }
 
-
+.most-protein{
+  margin-bottom: 25px;
+}

@@ -1,2 +1,46 @@
-<% provide(:title, 'Best Protein on Amazon') %>
-<%= render 'shared/amazon' %>
+<% provide(:title, 'Best Nutrition and Protein Products on Amazon') %>
+
+<center>
+<h1>Best Nutritional Food and Protein of Amazon</h1>
+<h2>Personally tested and approved! Great tasting, high protein Prime-eligible products.</h2>
+<h4>Not yet a Prime member? Students can <a target="_blank"href="http://www.amazon.com/gp/student/signup/info/?ref_=assoc_tag_ph_1402130811706&ie=UTF8&camp=1789&creative=9325&linkCode=pf4&tag=fasfoopro-20&linkId=ITPJ6PIMXF62UFOI"><span class="pink-txt">click here</span></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=fasfoopro-20&l=pf4&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> to join at a discounted rate,
+and anyone can <a target="_blank"href="http://www.amazon.com/gp/video/primesignup/?ref_=assoc_tag_ph_1402131641212&ie=UTF8&camp=1789&creative=9325&linkCode=pf4&tag=fasfoopro-20&linkId=WEFL56PDQUZ7N2WK"><span class="pink-txt">click here</a></span><img src="http://ir-na.amazon-adsystem.com/e/ir?t=fasfoopro-20&l=pf4&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"/> for a 30-day trial.
+</h4>
+		<div class="table-responsive">
+		  <table id="amazon-table" class="tablesorter table-striped">
+		    <thead> 
+		    	<tr>
+		    		<th>Food Name</th>
+		    		<th>Calories</th>
+		    		<th>Protein/100 kcal</th>
+		    		<th>Protein</th>
+		    		<th>Carbs</th>
+		    		<th>Fats</th>
+		    		<th>Amazon Link</th>
+		    	</tr>
+		    </thead>
+		    <tbody>
+		    	 <% @amazon_list.sort_by{|a| a[:protein]}.reverse.each do |data| %>
+		      <tr>
+		      	<td class="left-text"><a href="<%= data[:url] %>" target="_blank"><%= data[:food_name] %></a></td>
+		      	<td><%= data[:calories] %></td>
+		      	<td><%= (((data[:protein]*1.0)/data[:calories])*100).round(1) %></td>
+		      	<td><%= data[:protein] %></td>
+		      	<td><%= data[:carbs] %></td>
+		      	<td><%= data[:fat] %></td>
+		      	<td><a href="<%= data[:url] %>" target="_blank"><span class="pink-txt">I Want That!</span></a></td>
+		      </tr>
+		    <% end %>
+		    </tbody>
+		  </table>
+		</div>
+		<small>Some companies may list their calorie content lower to account for fiber content.</small>
+<script>
+	$(document).ready( function () {
+    $('#amazon-table').DataTable( {
+    	"pageLength": 25,
+    	"order": [[ 2, "desc" ]]
+    	}	
+    );
+} );
+</script>

@@ -1,9 +1,10 @@
-	<% provide(:title, 'Compare All') %>
+	<% provide(:title, 'Compare Fast Food Nutrition and Protein from All Restaurants') %>
 	<div class="center container-fluid">	
-	<h1>All Foods</h1>
-	<%= render partial: "shared/search_form", locals: {rest_list: true} %>	
-
+	<h1>All Fast Food Restaurants</h1>
+	
 	<%= render partial: "shared/most_protein", locals: {most_protein: @grid_foods} %>
+	
+	<%= render partial: "shared/search_form", locals: {rest_list: true} %>	
 
 	<%= render partial: "shared/search_table", locals: {grid_food: @grid_foods, extra_columns_selected: @extra_columns_selected} %>	
 	
