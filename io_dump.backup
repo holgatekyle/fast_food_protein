@@ -1,0 +1,92 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: inout; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "inout" (
+    food_name character varying(255),
+    serving_size character varying(255),
+    calories numeric,
+    cals_from_fat integer,
+    fat numeric,
+    sat_fat numeric,
+    trans_fat numeric,
+    cholesterol integer,
+    sodium integer,
+    carbs numeric,
+    fiber numeric,
+    sugars numeric,
+    protein numeric,
+    vit_a numeric,
+    vit_c numeric,
+    calcium numeric,
+    iron numeric,
+    food_class character varying(255)
+);
+
+
+ALTER TABLE public."inout" OWNER TO postgres;
+
+--
+-- Data for Name: inout; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "inout" (food_name, serving_size, calories, cals_from_fat, fat, sat_fat, trans_fat, cholesterol, sodium, carbs, fiber, sugars, protein, vit_a, vit_c, calcium, iron, food_class) FROM stdin;
+Hamburger w/Onion	243	390	170	19	5	0	40	650	39	3	10	16	10	15	4	20	FD
+Hamburger With Mustard & Ketchup instead of Spread	243	310	90	10	4	0	35	730	41	3	10	16	15	20	4	20	FD
+Hamburger Protein Style	275	240	150	17	4	0	40	370	11	3	7	13	15	20	4	15	FD
+Cheeseburger w/Onion	268	480	240	27	10	0.5	60	1000	39	3	10	22	15	15	20	20	FD
+Cheeseburger With Mustard & Ketchup instead of Spread	268	400	160	18	9	0.5	60	1080	41	3	10	22	20	20	20	20	FD
+Cheeseburger Animal Style	268	480	\N	27	10	0.5	60	1000	39	3	10	22	\N	\N	\N	\N	FD
+Cheeseburger Protein Style	300	330	220	25	9	0	60	720	11	3	7	18	20	20	20	15	FD
+Double-Double w/Onion	330	670	370	41	18	1	120	1440	39	3	10	37	20	15	35	30	FD
+Double-Double With Mustard & Ketchup instead of Spread	330	590	290	32	17	1	115	1520	41	3	10	37	25	20	25	30	FD
+Double-Double Protein Style	362	520	350	39	17	1	120	1160	11	3	7	33	25	20	35	25	FD
+3x3 Cheeseburger	\N	860	\N	55	26	1	180	1880	39	3	10	52	25	15	0	0	FD
+3x3 Protein Style	\N	710	\N	53	25	0	180	1600	11	3	7	48	30	20	50	35	FD
+3x3 No Cheese	\N	590	\N	31	11	0	120	830	39	3	10	34	10	15	0	0	FD
+4x4 Cheeseburger	\N	1050	\N	69	34	2	240	2260	39	3	10	67	30	15	0	0	FD
+4x4 No Cheese	\N	690	\N	37	14	0	160	860	39	3	10	43	10	15	0	0	FD
+4x4 Protein Style	\N	900	\N	67	33	2	240	2040	11	3	7	63	35	20	65	45	FD
+4x4 Protein Style, No Cheese	\N	540	\N	35	13	0	160	640	11	3	7	39	15	20	1	45	FD
+French Fries	125	395	160	18	5	0	0	245	54	2	0	7	0	0	2	10	FDI
+Animal Style Fries	\N	660	378	42	17	1	50	1105	54	2	0	19	0	0	2	10	FDI
+Chocolate Shake	15oz.	590	260	29	19	1	15	320	72	0	65	10	25	0	35	10	FDI
+Vanilla Shake	15oz.	580	280	31	20	1	20	300	67	0	57	10	25	0	35	8	FDI
+Strawberry Shake	15oz.	590	240	27	18	1	15	270	81	0	67	8	20	0	30	15	FDI
+Coca-Cola Classic	16oz.	195	0	0	0	0	0	12	54	0	54	0	0	0	0	0	D
+Diet Coke	16oz.	0	0	0	0	0	0	20	0	0	0	0	0	0	0	0	D
+Seven Up	16oz.	200	0	0	0	0	0	60	54	0	54	0	0	0	0	0	D
+Dr. Pepper	16oz.	200	0	0	0	0	0	60	52	0	52	0	0	0	0	0	D
+Root Beer	16oz.	219	0	0	0	0	0	48	60	0	60	0	0	0	0	0	D
+Lemonade	16oz.	179	0	0	0	0	0	20	40	0	38	0	0	8	0	0	D
+Minute Maid Light Lemonade	16oz.	8	0	0	0	0	0	7	1	0	0	0	0	14	1	0	D
+Iced Tea	16oz.	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	D
+Coffee	16oz.	5	0	0	0	0	0	10	0	0	0	1	0	0	0	0	D
+Milk	10oz.	180	50	6	4	0	30	190	18	0	18	12	15	6	45	0	D
+3x3 Protein Style, No Cheese	\N	440	\N	29	10	0	120	550	11	3	7	30	15	20	2	35	FD
+Cheese	\N	90	70	8	5	0.5	20	350	0	0	0	6	5	0	16	0	C
+Bun	\N	150	20	2	1	0	0	280	28	0	3	3	-5	-5	0	5	C
+\.
+
+
+--
+-- PostgreSQL database dump complete
+--
+

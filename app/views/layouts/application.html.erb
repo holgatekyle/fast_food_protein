@@ -2,7 +2,9 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <meta name="description" content="The fastest and easiest way to compare fast food restaurant nutritional information. Find meals high in protein that fit your diet.">
+  <% if @home_page%>
+  	<meta name="description" content="The fastest and easiest way to compare fast food restaurant nutritional information. Find meals high in protein that fit your diet.">
+  <% end %>
   <meta name="keywords" content="nutrition, protein, fast food, restaurants">
   <meta name="msvalidate.01" content="108242BCAF385BDA9FEC575ADF16FA64" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -37,9 +39,6 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 	<%= render 'shared/navbar' %>
-<% if !@home_page%>
-<% else %>
-<% end %>
 <div class="center">  
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
