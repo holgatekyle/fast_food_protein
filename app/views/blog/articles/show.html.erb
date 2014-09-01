@@ -1,0 +1,7 @@
+
+
+  <h1><%= @article.title  %></h1>
+  <%= render partial: "meta", locals: {article: @article} %>	
+  <%= @article.content %>
+  <hr>
+   <p> <%= link_to "← Back to Articles", blog_article_path %></p>
