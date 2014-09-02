@@ -1,0 +1,18 @@
+@import "variables";
+
+.time{
+  font-style:italic;
+}
+
+.meta{
+  margin-bottom: 15px;
+  color: $mediumGray;
+}
+
+.excerpt {
+  font-size: 20px;
+}
+
+.article-content {
+  font-size: 18px;
+}

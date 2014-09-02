@@ -1,0 +1,22 @@
+<h1 class="center">Fast Food Protein & Nutrition Blog</h1>
+<div class="container-fluid">
+	<div class="col-sm-6 col-sm-offset-2">
+	<% @articles.each do |article| %>
+	<h2> <%= link_to article.title, blog_article_path(article) %> </h2>
+	<%= render partial: "meta", locals: {article: article} %>
+	<div class="excerpt">	
+	<%= article.excerpt %>
+	</div>
+	<% if article.has_more_text? %>
+	    <p> <%= link_to "Continue reading →", blog_article_path(article) %></p>
+	    <% end %>
+	<% end %>
+	</div>
+	
+	<div class="col-sm-offset-2 col-sm-2 pull-right" style="text-align:right">
+	<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=ss_til&ad_type=product_link&tracking_id=ffp-blog-20&marketplace=amazon&region=US&placement=B000QSNYGI&asins=B000QSNYGI&linkId=Q3VY3Y2H54VUJK5K&show_border=true&link_opens_in_new_window=true">
+	</iframe>
+	<br>
+	<a href="http://www.amazon.com/gp/product/B000QSNYGI/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000QSNYGI&linkCode=as2&tag=ffp-blog-20&linkId=BHAFL6IV6A4RNOYS">Optimum Nutrition 100% Whey Gold Standard, on Amazon</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=ffp-blog-20&l=as2&o=1&a=B000QSNYGI" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+	</div>
+</div>

@@ -9,6 +9,16 @@ BestFood::Application.routes.draw do
   
   get 'r/:id' => 'foods#restaurant'
   get 'restaurant/:id' => 'foods#restaurant'
+  
+  
+  # This gives you:
+# /blog
+# /blog/:name-of-the-article
+namespace :blog do
+  resources :articles, path: '', only: [:index, :show]
+end
+  
+  
   get ':action' => 'foods#:action'
   
   
