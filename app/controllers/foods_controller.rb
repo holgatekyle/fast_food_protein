@@ -14,6 +14,7 @@ class FoodsController < ApplicationController
       @extra_columns_selected = params[:extra_columns]
     end    
     
+    if params[:search]
     #this block is for the user-filtered list
     if params[:company_list] #check if params are sent through
         @company_filter_list = params[:company_list][:list].reject!(&:empty?) #remove empty entries
@@ -27,7 +28,7 @@ class FoodsController < ApplicationController
     else
       @grid_foods = apply_scopes(Food.all_solid_foods(@show_breakfast))
     end
-    
+    end
   end
   
   def restaurant
