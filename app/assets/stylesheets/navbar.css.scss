@@ -81,14 +81,14 @@ $black: #fcfefd;
         background-color: $bgHighlight; }}}
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 767px){
     .columns{
         height: 200px;
         overflow:scroll;
     }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 768px){
     .columns{
         -moz-column-count:2; /* Firefox */
         -webkit-column-count:2; /* Safari and Chrome */
