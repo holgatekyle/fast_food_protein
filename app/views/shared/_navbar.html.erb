@@ -16,7 +16,7 @@
 	          	
           	<li class="dropdown">
           		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Restaurants<span class="caret"></span></a>
-		          <ul class="dropdown-menu" role="menu">
+		          <ul class="dropdown-menu columns" role="menu">
 		          	<% Food.distinct_company_names.each do |name| %>
 						<li class="<%= is_active?(restaurant_path) %>"><a href="<%=restaurant_path %>/<%= name.company_name %>"><%= name.company_name %></a></li>
 					<% end %>

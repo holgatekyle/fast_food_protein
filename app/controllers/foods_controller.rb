@@ -55,6 +55,10 @@ class FoodsController < ApplicationController
   def amazon
     
   end
+  
+  def about
+    
+  end
 
   private
   

@@ -75,6 +75,13 @@ h4 {
   margin-bottom: 20px;
 }
 
+.footer-txt{
+  color: $darkGray !important;
+  a{
+    color: $darkGray !important;
+  }
+}
+
 .tip-footer{
   color: $darkGray;
   margin-top:20px;
@@ -107,4 +114,8 @@ h4 {
 
 .most-protein{
   margin-bottom: 25px;
+}
+
+.about-page-txt{
+  font-size:20px;
 }
