@@ -2,9 +2,9 @@
 <div class="center container-fluid">	
 	<h1><%= @company_name + ' Nutrition'%></h1>
 	
-	<%= render partial: "shared/most_protein", locals: {most_protein: @grid_foods} %>
+	<%= render partial: "shared/most_protein", locals: {most_protein: @grid_foods, all_list: false} %>
 
-	<%= render partial: "shared/search_form", locals: {rest_list: false} %>	
+	<%= render partial: "shared/search_form", locals: {all_list: false} %>	
 	
 	<script type="text/javascript">  
         $(function(){

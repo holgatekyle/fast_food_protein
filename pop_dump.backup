@@ -1,0 +1,118 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: pop; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE pop (
+    food_name character varying(255),
+    serving_size character varying(255),
+    calories numeric,
+    cals_from_fat integer,
+    fat numeric,
+    sat_fat numeric,
+    trans_fat numeric,
+    cholesterol integer,
+    sodium integer,
+    carbs numeric,
+    fiber numeric,
+    sugars numeric,
+    protein numeric,
+    vit_a numeric,
+    vit_c numeric,
+    calcium numeric,
+    iron numeric,
+    food_class character varying(255)
+);
+
+
+ALTER TABLE public.pop OWNER TO postgres;
+
+--
+-- Data for Name: pop; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY pop (food_name, serving_size, calories, cals_from_fat, fat, sat_fat, trans_fat, cholesterol, sodium, carbs, fiber, sugars, protein, vit_a, vit_c, calcium, iron, food_class) FROM stdin;
+Chicken Wing	63	210	\N	14	4	0	60	610	8	1	0	13	\N	\N	\N	\N	FD
+Chicken Leg	67	160	\N	9	4	0	40	460	5	1	0	14	\N	\N	\N	\N	FD
+Chicken Thigh	80	280	\N	21	8	0	50	640	7	1	0	14	\N	\N	\N	\N	FD
+Chicken Breast	157	440	\N	27	11	1	110	1330	16	2	0	35	\N	\N	\N	\N	FD
+Nuggets (4 Pcs)	50	150	\N	9	4	0.5	25	230	10	1	0	7	\N	\N	\N	\N	FD
+Nuggets (6 Pcs)	75	230	\N	14	6	1	40	350	14	1	0	11	\N	\N	\N	\N	FD
+Mild Tenders (3pcs)	126	340	\N	14	6	1	70	1350	26	1	0	27	\N	\N	\N	\N	FD
+Spicy Tenders (3 Pcs)	126	310	\N	15	6	1	80	1240	16	2	0	28	\N	\N	\N	\N	FD
+Blackened Tenders (3 Pcs)	113	170	\N	2	0	0	25	550	2	0	0	26	\N	\N	\N	\N	FD
+Loaded Chicken Wrap	130	310	\N	13	6	0	30	890	33	3	0	14	\N	\N	\N	\N	FD
+Chicken Po' Boy	635	660	\N	34	9	1	75	2120	61	3	3	31	\N	\N	\N	\N	FD
+Shrimp Po' Boy	271	690	\N	42	13	1	75	2165	66	5	3	42	\N	\N	\N	\N	FD
+Blackened Bbq Chicken Po' Boy	210	340	\N	7	1.5	0	50	1030	49	2	11	24	\N	\N	\N	\N	FD
+Chicken & Sausage Jambalaya	151	220	\N	11	3	0	32	760	20	1	0	10	\N	\N	\N	\N	FD
+Chicken Livers	284	1190	\N	80	34	4.5	765	2070	65	6	3	54	\N	\N	\N	\N	FD
+Popcorn Shrimp	99	330	\N	9	9	1	65	1290	28	3	0	11	\N	\N	\N	\N	FD
+Butterfly Shrimp (8 Shrimp)	100	290	\N	17	8	1	90	820	21	3	0	12	\N	\N	\N	\N	FD
+Catfish Fillet	147	460	\N	29	12	2	65	1140	27	1	0	21	\N	\N	\N	\N	FD
+Biscuit	60	260	\N	15	7	0	0	450	26	2	1	4	\N	\N	\N	\N	FDI
+Baguette	36	90	\N	2	0	0	0	80	18	1	1	3	\N	\N	\N	\N	FDI
+Cheddar Cheese Tortilla	45	140	\N	4.5	2.5	0	0	210	21	1	0	3	\N	\N	\N	\N	FDI
+Cajun Fries	85	260	\N	14	5	1	10	570	30	2	0	3	\N	\N	\N	\N	FDI
+Cajun Fries	255	770	\N	41	16	3.5	25	1700	89	7	1	10	\N	\N	\N	\N	FDI
+Corn On The Cob	284	190	\N	2	0.5	0	0	0	37	4	0	6	\N	\N	\N	\N	FDI
+Macaroni & Cheese	156	200	\N	7	3.5	0	15	490	26	1	3	8	\N	\N	\N	\N	FDI
+Macaroni & Cheese	468	600	\N	21	11	0	45	1470	78	3	0	24	\N	\N	\N	\N	FDI
+Mashed Potatoes	142	110	\N	4	2	0	5	590	18	1	1	3	\N	\N	\N	\N	FDI
+Mashed Potatoes	426	330	\N	12	6	0	15	1770	54	3	3	9	\N	\N	\N	\N	FDI
+Red Beans& Rice	146	230	\N	14	4	0	10	580	23	5	0	7	\N	\N	\N	\N	FDI
+Red Beans& Rice	438	690	\N	42	12	0	30	1740	69	15	0	21	\N	\N	\N	\N	FDI
+Cajun Rice	123	170	\N	5	2	0	25	530	25	1	4	7	\N	\N	\N	\N	FDI
+Cajun Rice	369	510	\N	15	6	0	75	1590	75	3	11	21	\N	\N	\N	\N	FDI
+Green Beans	100	40	\N	1.5	0	0	5	420	6	2	1	2	\N	\N	\N	\N	FDI
+Green Beans	300	120	\N	4.5	0	0	15	1260	18	3	3	6	\N	\N	\N	\N	FDI
+Cole Slaw	138	220	\N	15	2.5	0	10	300	19	2	15	1	\N	\N	\N	\N	FDI
+Cole Slaw	414	660	\N	46	8	0	30	900	58	7	45	4	\N	\N	\N	\N	FDI
+Onion Rings	75	280	\N	19	8	1	10	460	25	2	2	3	\N	\N	\N	\N	FDI
+Onion Rings	150	560	\N	38	17	2.5	25	920	50	5	4	6	\N	\N	\N	\N	FDI
+Onion Rings	225	830	\N	56	25	3.5	35	1370	74	7	6	9	\N	\N	\N	\N	FDI
+Jalapenos	6	0	\N	0	0	0	0	368	1	1	0	0	\N	\N	\N	\N	FDI
+Chicken Biscuit	148	490	\N	26	14	0.5	28	1275	47	1	2	17	\N	\N	\N	\N	FB
+Sausage Biscuit	138	540	\N	36	18	0	32	1100	41	1	2	13	\N	\N	\N	\N	FB
+Egg Biscuit	138	510	\N	29	15	0	125	1155	41	1	2	13	\N	\N	\N	\N	FB
+Egg & Sausage Biscuit	186	690	\N	45	22	0	157	1520	43	1	2	20	\N	\N	\N	\N	FB
+Bacon Biscuit	140	400	\N	25	12	0	5	780	37	3	2	8	\N	\N	\N	\N	FB
+Sausage & Gravy Biscuit	185	510	\N	33	14	0.5	15	1090	42	3	3	10	\N	\N	\N	\N	FB
+Grits	141	370	\N	5	0.5	0	0	30	80	7	0	5	\N	\N	\N	\N	FB
+Hash Rounds	110	360	\N	20	9	1	10	450	41	4	0	3	\N	\N	\N	\N	FB
+Hot Cinnamon Apple Pie	100	320	\N	6	8	0	5	340	40	2	12	3	\N	\N	\N	\N	FDI
+Mississippi Mud Pie	85	280	\N	7	1.5	0	20	210	51	2	27	3	\N	\N	\N	\N	FDI
+Mardi Gras Cheesecake	87	310	\N	19	10	0	60	290	32	1	22	4	\N	\N	\N	\N	FDI
+Sliced Pecan Pie	95	410	\N	21	6	0	70	220	52	1	22	4	\N	\N	\N	\N	FDI
+Hot Sweet Potato Pie	100	350	\N	19	8	0	15	370	41	2	10	4	\N	\N	\N	\N	FDI
+Barbeque	28	45	\N	0	0	0	0	320	10	0	8	0	\N	\N	\N	\N	C
+Ranch	28	150	\N	15	2.5	0	10	230	3	0	1	0	\N	\N	\N	\N	C
+Sweet Heat	38	70	\N	0	0	0	0	160	19	0	14	0	\N	\N	\N	\N	C
+Mardi Gras Mustard	28	100	\N	8	1.5	0	10	240	5	1	4	1	\N	\N	\N	\N	C
+Cocktail	28	30	\N	0	0	0	0	320	6	0	6	0	\N	\N	\N	\N	C
+Tartar Sauce	28	140	\N	15	2.5	0	15	280	1	0	1	0	\N	\N	\N	\N	C
+Creamy Horseradish	28	130	\N	11	2	0	10	90	6	0	6	0	\N	\N	\N	\N	C
+Blackened Ranch	28	120	\N	0	2	0	2	250	2	0	1	1	\N	\N	\N	\N	C
+\.
+
+
+--
+-- PostgreSQL database dump complete
+--
+

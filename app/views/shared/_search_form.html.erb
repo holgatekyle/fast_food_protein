@@ -1,13 +1,13 @@
   <div class="container-fluid search-criteria">	
 
-	<form action="<% if rest_list %>/search<% end %>" method="get">
-	<% if rest_list %>
+	<form action="<% if all_list %>/search<% end %>" method="get">
+	<% if all_list %>
 		  <div class="col-md-4">
 		  <div class="row"><h4><%= label_tag(:company_name, "Restaraunts:") %></h4></div>
 		  <%= collection_select(:company_list, :list, Food.distinct_company_names, :company_name, :company_name, {:selected => @company_filter_list}, :multiple=>true, :size=>8,:class=>"search-form-select-list") %>
 	  	  </div>
   	  <% end %>
-	  	  <div class="col-md-4 <% if !rest_list %> col-md-offset-2<% end %>">
+	  	  <div class="col-md-4 <% if !all_list %> col-md-offset-2<% end %>">
 	  	  <div class="row"><h4><%= label_tag(:company_name, "Nutrition Filters:") %></h4></div>
 	  	  <div class="row"><span title="Food Name"><%= text_field_tag :food_name, params[:food_name], placeholder: "Food Name", class: "search-form-text-field" %></div>
 	  	  <div class="row"><span title="Minimum Protein (g)"><%= text_field_tag :protein, params[:protein], placeholder: "Minimum Protein (g)", class: "search-form-text-field" %></span></div>

@@ -3,10 +3,10 @@
 	<h1>All Fast Food Restaurants</h1>
 	
 	<% if params[:search] %>
-	<%= render partial: "shared/most_protein", locals: {most_protein: @grid_foods} %>
+	<%= render partial: "shared/most_protein", locals: {most_protein: @grid_foods, all_list: true} %>
 	<%end%>
 	
-	<%= render partial: "shared/search_form", locals: {rest_list: true} %>	
+	<%= render partial: "shared/search_form", locals: {all_list: true} %>	
 	
 	<% if params[:search] %>
 	<%= render partial: "shared/search_table", locals: {grid_food: @grid_foods, extra_columns_selected: @extra_columns_selected} %>
