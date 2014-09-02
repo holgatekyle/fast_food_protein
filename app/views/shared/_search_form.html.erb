@@ -22,6 +22,7 @@
 		<div class="row"><%= select_tag(:extra_columns, options_for_select(@extra_columns_list, @extra_columns_selected), :size=>6, :multiple=>true, :class=>"search-form-select-list") %></div>
 		   <div class="row"><%= check_box_tag 'ptoc', 1, @show_pc%><span class="checkbox-text">Show Protein/Carb</span></div>
 		    <div class="row"><%= check_box_tag 'ptof', 1, @show_pf%><span class="checkbox-text">Show Protein/Fat</span></div>
+		    <div class="row"><%= check_box_tag 'ctof', 1, @show_cf%><span class="checkbox-text">Show Carb/Fat</span></div>
 	  </div>
 
 	<div class="col-md-12"> 

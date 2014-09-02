@@ -69,6 +69,7 @@ class FoodsController < ApplicationController
       @show_breakfast = false
       @show_pc = false
       @show_pf = false
+      @show_cf = false
       
       if params[:breakfast] == "1"
         @show_breakfast = true
@@ -80,6 +81,10 @@ class FoodsController < ApplicationController
       
       if params[:ptof] == "1"
         @show_pf = true
+      end
+      
+      if params[:ctof] == "1"
+        @show_cf = true
       end
       
       @amazon_list = [{ food_name: 'Power Crunch Bars - Cookies and Creme', calories: 205, fat: 12, protein: 14, carbs: 10, url: 'http://www.amazon.com/gp/product/B000FRSSFC/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000FRSSFC&linkCode=as2&tag=fasfoopro-20&linkId=MO4MZBR2JB2HQYHN' },

@@ -48,7 +48,7 @@ class Food < ActiveRecord::Base
     if calories == 0 and protein > 0
       return BigDecimal('Infinity')
     elsif calories == 0 and protein == 0
-      return 0
+      return 1
     else
       return (protein / (calories*1.0 / 100)).round(1)
     end
@@ -59,7 +59,7 @@ class Food < ActiveRecord::Base
     if fat == 0 and protein > 0
       return BigDecimal('Infinity')
     elsif fat == 0 and protein == 0
-      return 0
+      return 1
     else
       return ApplicationController.helpers.fix_precision((protein / fat).round(2))
     end
@@ -70,9 +70,20 @@ class Food < ActiveRecord::Base
     if carbs == 0 and protein > 0
       return BigDecimal('Infinity')
     elsif carbs == 0 and protein == 0
-      return 0
+      return 1
     else
       return ApplicationController.helpers.fix_precision((protein / carbs).round(2))
+    end
+  end
+  
+  #carb/fat ratio
+  def c_f_ratio
+    if fat == 0 and carbs > 0
+      return BigDecimal('Infinity')
+    elsif carbs == 0 and fat == 0
+      return 1
+    else
+      return ApplicationController.helpers.fix_precision((carbs / fat).round(2))
     end
   end
   

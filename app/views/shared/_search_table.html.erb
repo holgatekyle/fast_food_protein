@@ -13,6 +13,9 @@
 		    		<% if @show_pc %>
 		    			<th>Protein/Carbs</th>
 		    		<% end %>
+		    		<% if @show_cf %>
+		    			<th>Carbs/Fat</th>
+		    		<% end %>
 		    		<th>Protein</th>
 		    		<th>Fats</th>
 		    		<th>Carbs</th>
@@ -33,6 +36,9 @@
 		    	<% end %>
 		    	<% if @show_pc %>
 		    		<td><%= data.p_c_ratio %></td>
+		    	<% end %>
+		    	<% if @show_cf %>
+		    		<td><%= data.c_f_ratio %></td>
 		    	<% end %>
 		      	<td><%= fix_precision(data.protein) %></td>
 		      	<td><%= fix_precision(data.fat) %></td>
