@@ -45,6 +45,35 @@ class Food < ActiveRecord::Base
   
   #protein/100cal ratio
   def p_100_ratio
-    return (protein / (calories*1.0 / 100)).round(1)
+    if calories == 0 and protein > 0
+      return BigDecimal('Infinity')
+    elsif calories == 0 and protein == 0
+      return 0
+    else
+      return (protein / (calories*1.0 / 100)).round(1)
+    end
   end
+  
+  #protein/fat ratio
+  def p_f_ratio
+    if fat == 0 and protein > 0
+      return BigDecimal('Infinity')
+    elsif fat == 0 and protein == 0
+      return 0
+    else
+      return ApplicationController.helpers.fix_precision((protein / fat).round(2))
+    end
+  end
+  
+  #protein/carbs ratio
+  def p_c_ratio
+    if carbs == 0 and protein > 0
+      return BigDecimal('Infinity')
+    elsif carbs == 0 and protein == 0
+      return 0
+    else
+      return ApplicationController.helpers.fix_precision((protein / carbs).round(2))
+    end
+  end
+  
 end

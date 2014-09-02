@@ -27,12 +27,12 @@
 		      	<td class="left-text"><%= data.company_name %></b></td>
 		      	<td class="left-text"><%= data.food_name.titleize %><%if ['Panera Bread', 'Chipotle'].include? data.company_name and !data.serving_size.blank?%> (<%= data.serving_size %>)<%end%></td>
 		      	<td><%= fix_precision(data.calories) %></td>
-		      	<td><%= (((data.protein*1.0)/data.calories)*100).round(1) %></td>
+		      	<td><%= data.p_100_ratio %></td>
 		      	<% if @show_pf %>
-		    		<td><%= ((data.protein*1.0)/data.fat).round(2) %></td>
+		    		<td><%= data.p_f_ratio %></td>
 		    	<% end %>
 		    	<% if @show_pc %>
-		    		<td><%= ((data.protein*1.0)/data.carbs).round(2) %></td>
+		    		<td><%= data.p_c_ratio %></td>
 		    	<% end %>
 		      	<td><%= fix_precision(data.protein) %></td>
 		      	<td><%= fix_precision(data.fat) %></td>
