@@ -2,8 +2,8 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <% if @home_page%>
-  	<meta name="description" content="Compare fast food restaurant nutritional information in a new fast and simple way. Find meals high in protein that fit your diet.">
+  <% if content_for?(:metadesc) %>
+  	<meta name="description" content="<%= yield(:metadesc) %>">
   <% end %>
   <meta name="keywords" content="nutrition, protein, fast food, restaurants">
   <meta name="msvalidate.01" content="108242BCAF385BDA9FEC575ADF16FA64" />

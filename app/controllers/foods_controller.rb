@@ -4,7 +4,6 @@ class FoodsController < ApplicationController
 
   # GET /foods
   def index
-    @home_page = true
   end
   
   def search    
@@ -64,7 +63,6 @@ class FoodsController < ApplicationController
   private
   
     def init_vars
-      @home_page = false
       @extra_columns_selected = []
       @show_breakfast = false
       @show_pc = false
