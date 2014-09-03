@@ -5,15 +5,18 @@
 <div class="container-fluid">
 	<div class="col-sm-6 col-sm-offset-2">
 	<% @articles.each do |article| %>
-	<h2> <%= link_to article.title, blog_article_path(article) %> </h2>
-	<%= render partial: "meta", locals: {article: article} %>
-	<div class="excerpt">	
-	<%= article.excerpt %>
-	</div>
-	<% if article.has_more_text? %>
-	    <p> <%= link_to "Continue reading →", blog_article_path(article) %></p>
-	    <% end %>
+		<div class="container-fluid">
+			<h2> <%= link_to article.title, blog_article_path(article) %> </h2>
+			<%= render partial: "meta", locals: {article: article} %>
+			<div class="excerpt">	
+				<%= markdown(article.excerpt) %>
+			</div>
+			<% if article.has_more_text? %>
+			    <p> <%= link_to "Continue reading →", blog_article_path(article) %></p>
+			<% end %>
+		</div>
 	<% end %>
+	
 	</div>
 	
 	<div class="col-sm-offset-2 col-sm-2 pull-right" style="text-align:right">

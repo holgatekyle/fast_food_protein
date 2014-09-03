@@ -11,6 +11,11 @@ class Blog::Article
   def content
     remove_yaml_frontmatter_from @content
   end
+  
+  def content_body
+    content.sub(/.*<!--more-->/m, "")
+  end
+  
 
   def excerpt
     content.split('<!--more-->').first
@@ -50,7 +55,7 @@ class Blog::Article
   end
 
   def self.find_file_by(name)
-    id = article_files.index { |x| x =~ /#{name}.md/ }
+    id = article_files.index { |x| x =~ /#{name}.*/ }
     article_files[id]
   end
 

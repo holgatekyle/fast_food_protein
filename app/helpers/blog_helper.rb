@@ -7,7 +7,6 @@ module BlogHelper
   end
 
   def markdown(text)
-    renderer = HTMLwithPygments.new(hard_wrap: true, filter_html: true)
     options = {
       autolink: true,
       no_intra_emphasis: true,
@@ -16,10 +15,11 @@ module BlogHelper
       strikethrough: true,
       superscript: true
     }
+    renderer = Redcarpet::Render::HTML.new(options)
     Redcarpet::Markdown.new(renderer, options).render(text).html_safe
   end
 
   def preserve_markdown(text) # Used to get the indentation right in the <pre> code blocks with Haml
-    preserve markdown(text)
+     markdown(text)
   end
 end
