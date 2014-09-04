@@ -12,7 +12,7 @@ If you have a fever, and the only prescription is more protein, you're not going
 
 **Protein** is the most highly sought-after nutrient in society today. As low-fat, high-carb and low-carb, high-fat diet crazes come and go, the one thing everyone can seem to agree on is the essentiality of protein. 
 
-For those looking to get fit and gain muscle, a high-protein diet is the keystone to any training plan. If you're wondering how much is enough,<a href="http://examine.com/faq/how-much-protein-do-i-need-every-day.html" target="_blank">extensive research</a> has been done into protein consumption with optimal ranges found to be *at least* .36g/lb bodyweight for sedentary lifestyles, and up to 1g/lb bodyweight for athletes.
+For those looking to get fit and gain muscle, a high-protein diet is the keystone to any training plan. If you're wondering how much is enough, <a href="http://examine.com/faq/how-much-protein-do-i-need-every-day.html" target="_blank">extensive research</a> has been done into protein consumption with optimal ranges found to be *at least* .36g/lb bodyweight for sedentary lifestyles, and up to 1g/lb bodyweight for athletes.
 
 ##Time to Feast
 
@@ -22,7 +22,7 @@ Enough talk, you're hungry. Let's get to the goods. We'll work down [our top pro
 
 * **Carl's Jr./Zaxby's 20-piece Chicken Fingers - 164g/182g**
 
-	First up, 20-piece chicken tenders from two different chains that are equally impressive. At 1760 and 1740 calories, if you can finish either in one sitting, you deserve a parade.
+	First up, 20-piece chicken tenders from two different chains that are equally impressive. At 1760 and 1740 calories, if you can finish either in one sitting you deserve a parade.
 	
 	Interestingly, McDonalds 40-piece Chicken McNugget is also near the top of our list, but pales in comparison to even a 10-piece chicken tender meal from the above chains in terms of nutritional content. Kinda begs the question, what the hell is a McNugget?
 	
