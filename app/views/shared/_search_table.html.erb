@@ -56,7 +56,7 @@
 	$(document).ready( function () {
     $('#allfoods').DataTable( {
     	"pageLength": 10,
-    	"order": [[ 3, "desc" ]]
+    	"order": [[ <%=@sort_by%>, "desc" ]]
     	}	
     );
 } );

@@ -4,7 +4,7 @@ author: "Kyle"
 created_at: "Sept 3, 2014"
 ---
 
-We review the best healthy fast food items on [our website](http://www.fastfoodprotein.com/search) (so far) and give you tips on staying healthy when eating fast food.
+A review of the best healthy fast food items on [our website](http://www.fastfoodprotein.com/search) (so far) and give you tips on staying healthy when eating fast food.
 
 <!--more-->
 
@@ -22,11 +22,11 @@ Here's a list of items that should be avoided if you want to keep your meal heal
 	
 * **Shakes**
 
-	Just don't do it. A large shake is going to run you *at least 750 calories*, with most being **900+ calories** and well over 120g carbs! <a href="http://www.fastfoodprotein.com/search?company_list%5Blist%5D%5B%5D=&food_name=shake&protein=&max_cals=&max_carbs=&max_fat=&search=Compare" target="_blank">Don't say I didn't warn you...</a>
+	Just don't do it. Likely the worst item you can order at a fast food restaurant; a large shake is going to run you *at least 750 calories*, with most being **900+ calories** and well over 120g carbs! <a href="http://www.fastfoodprotein.com/search?company_list%5Blist%5D%5B%5D=&food_name=shake&protein=&max_cals=&max_carbs=&max_fat=&search=Compare" target="_blank">Don't say I didn't warn you...</a>
 	
 * **Beef**
 
-	Generally speaking, beef menu items tend to be higher in fat than chicken and lower in protein than seafood making them the least attractive protein source. They also almost always come on a bun and are very rarely alone or on a salad, which makes beef something to avoid. If you're ordering your beef without the bun, then it's really not so bad.
+	Generally speaking, beef menu items tend to be higher in fat than chicken and lower in protein than seafood making them the least attractive protein source. They also almost always come on a bun and are very rarely alone or on a salad, which makes beef something to avoid. If you're ordering your beef without the bun, then it can still be a healthy fast food option, just not as good as chicken.
 	
 ##Healthy Choices
 So you're ready to make some healthier decisions? Excellent! Here's what I see as the best choices available -

@@ -69,6 +69,12 @@ class FoodsController < ApplicationController
       @show_pf = false
       @show_cf = false
       
+      if params[:sort]
+        @sort_by = params[:sort]
+      else
+        @sort_by = 3
+      end
+      
       if params[:breakfast] == "1"
         @show_breakfast = true
       end
