@@ -50,4 +50,4 @@ Enough talk, you're hungry. Let's get to the goods. We'll work down [our top pro
 	
 If you want to find a high protein meal of your own, check out the [fast food nutrition search tool](http://www.fastfoodprotein.com/search).
 
-Comments? Feedback? Let me know on [twitter](https://twitter.com/FastFoodProtein) or email kyle (at) fastfoodprotein.com.
+Comments? Feedback? Let me know on [twitter](https://twitter.com/FastFoodProtein) or email kyle (at) fastfoodprotein.com. 
