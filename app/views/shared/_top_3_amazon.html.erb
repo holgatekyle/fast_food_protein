@@ -1,0 +1,15 @@
+<div class="container-fluid">
+
+<h3>My Top 3 Favorites</h3>
+<div class = "row col-md-offset-4">
+<% @top_3_amazon.each do |d| %>
+	<div class="col-md-2 center">
+	<a href="<%= d[:url] %>" target="_blank"><%= image_tag d[:img], size:"110x150", alt:d[:food_name] %>
+		<br>
+		<%= d[:food_name] %>
+	</a>
+	</div>
+<% end %>
+</div>
+</div>
+

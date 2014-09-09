@@ -104,7 +104,11 @@ class FoodsController < ApplicationController
                       {  food_name: 'Body Fortress Whey Protein Powder', calories: 170, fat: 2.5, protein: 30, carbs: 7, fiber: 0, sugar: 2, cholesterol: 85, sodium: 70, url: 'http://www.amazon.com/gp/product/B001G8Y948/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B001G8Y948&linkCode=as2&tag=fasfoopro-20&linkId=OBU735TQJP2IIYZM' }
                       
                       ]
-                      
+  
+      @top_3_amazon = [{food_name: 'Seapoint Farms Dry Roasted Edamame', img: 'eda.png', url: 'http://www.amazon.com/gp/product/B000G2UUOS/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000G2UUOS&linkCode=as2&tag=ffp-amazon-top3-20&linkId=4G3FQN7OT5TMTHES'},
+                       {food_name: 'Optimum Nutrition Whey Gold Standard', img: 'onwhey.png', url: 'http://www.amazon.com/gp/product/B000QSNYGI/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000QSNYGI&linkCode=as2&tag=ffp-amazon-top3-20&linkId=PQUMGE32I7G2WET6'},
+                       {food_name: 'Power Crunch Bars - Cookies and Creme', img: 'pc.png', url: 'http://www.amazon.com/gp/product/B000FRSSFC/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000FRSSFC&linkCode=as2&tag=ffp-amazon-top3-20&linkId=DVCUF5FAYKWNXXVM'}
+                      ]
     end
 
     def get_column_names
