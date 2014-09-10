@@ -33,7 +33,6 @@ class FoodsController < ApplicationController
   def restaurant
    if params[:company_name]
       @company_name = params[:company_name][0]
-      redirect_to("/r/"+@company_name)
    else
      @company_name ||= params[:id]
    end

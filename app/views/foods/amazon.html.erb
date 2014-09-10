@@ -26,7 +26,7 @@ and anyone can <a target="_blank"href="http://www.amazon.com/gp/video/primesignu
 		    <tbody>
 		    	 <% @amazon_list.sort_by{|a| a[:protein]}.reverse.each do |data| %>
 		      <tr>
-		      	<td class="left-text"><a href="<%= data[:url] %>" target="_blank"><%= data[:food_name] %></a></td>
+		      	<td class="left-text-only"><a href="<%= data[:url] %>" target="_blank"><%= data[:food_name] %></a></td>
 		      	<td><%= data[:calories] %></td>
 		      	<td><%= (((data[:protein]*1.0)/data[:calories])*100).round(1) %></td>
 		      	<td><%= data[:protein] %></td>

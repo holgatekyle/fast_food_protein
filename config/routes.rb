@@ -20,7 +20,7 @@ namespace :blog do
 end
   
   
-  get ':action' => 'foods#:action'
+  #get ':action' => 'foods#:action'
   
   
 

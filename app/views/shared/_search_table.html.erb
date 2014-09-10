@@ -1,7 +1,7 @@
 <h3><strong>Nutrition Data Results:</strong></h3>
 		<div class="table-responsive">
-		  <table id="allfoods" class="tablesorter table-striped">
-		    <thead> 
+		  <table id="allfoods" class="tablesorter table-striped tablesaw tablesaw-stack" data-mode="stack">
+		    <thead> <!-- tablesorter table-striped -->
 		    	<tr>
 		    		<th>Company Name</th>
 		    		<th>Food Name</th>
@@ -27,8 +27,8 @@
 		    <tbody>
 		    	 <% grid_food.sort_by{|a| a["protein"]}.reverse.each do |data| %>
 		      <tr>
-		      	<td class="left-text"><%= data.company_name %></b></td>
-		      	<td class="left-text"><%= data.food_name.titleize %><%if ['Panera Bread', 'Chipotle'].include? data.company_name and !data.serving_size.blank?%> (<%= data.serving_size %>)<%end%></td>
+		      	<td class="left-text-only"><%= data.company_name %></b></td>
+		      	<td class="left-text-only"><%= data.food_name.titleize %><%if ['Panera Bread', 'Chipotle'].include? data.company_name and !data.serving_size.blank?%> (<%= data.serving_size %>)<%end%></td>
 		      	<td><%= fix_precision(data.calories) %></td>
 		      	<td><%= data.p_100_ratio %></td>
 		      	<% if @show_pf %>
