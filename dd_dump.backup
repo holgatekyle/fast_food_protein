@@ -1,0 +1,201 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'WIN1251';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: dd; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE dd (
+    food_name character varying(255),
+    serving_size character varying(255),
+    calories numeric,
+    cals_from_fat integer,
+    fat numeric,
+    sat_fat numeric,
+    trans_fat numeric,
+    cholesterol integer,
+    sodium integer,
+    carbs numeric,
+    fiber numeric,
+    sugars numeric,
+    protein numeric,
+    vit_a numeric,
+    vit_c numeric,
+    calcium numeric,
+    iron numeric,
+    food_class character varying(255)
+);
+
+
+ALTER TABLE public.dd OWNER TO postgres;
+
+--
+-- Data for Name: dd; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY dd (food_name, serving_size, calories, cals_from_fat, fat, sat_fat, trans_fat, cholesterol, sodium, carbs, fiber, sugars, protein, vit_a, vit_c, calcium, iron, food_class) FROM stdin;
+Brown Sugar Flavored Oatmeal with Dried Fruit Topping	1 Serving	300	35	4	1	0	0	470	61	6	28	7	40	0	20	45	FDI
+Hash Browns (9 piece)	9 Pieces	200	100	11	1.5	0	0	730	22	3	0	2	0	4	2	2	FDI
+Hash Browns (6 piece)	6 piece	130	70	7	1	0	0	480	15	2	0	1	0	2	2	2	FDI
+Original Oatmeal with Dried Fruit Topping	1 Serving	270	35	4	1	0	0	140	54	6	22	7	40	0	20	80	FDI
+Cheddar Cheese Bagel Twist	1 Bagel Twist	390	70	8	4.5	0	20	770	65	4	7	16	6	0	15	20	FDI
+Cinnamon Raisin Bagel Twist	1 Bagel Twist	350	10	1	0	0	0	510	72	4	20	12	0	0	4	20	FDI
+BBQ Chicken Sandwich	1 Sandwich	590	170	19	6	0	60	1420	74	3	10	30	4	2	20	30	FD
+Bacon Ancho Chicken Sandwich	1 Sandwich	640	220	25	7	0	65	1620	70	3	7	34	6	0	20	35	FD
+Bacon Ranch Chicken Sandwich	1 Sandwich	660	250	27	8	0	65	1620	69	3	6	34	4	0	20	35	FD
+Chicken Salad Wrap	1 Wrap	500	310	34	9	0	70	1220	24	1	3	23	6	2	25	10	FD
+Chicken Salad on a Croissant	1 Sandwich	580	340	38	11	0	45	910	42	2	6	17	2	2	4	15	FD
+Deluxe Grilled Cheese with Bacon	1 Sandwich	550	290	33	14	0.5	45	1140	41	1	4	22	10	0	40	15	FD
+Deluxe Grilled Cheese with Ham	1 Sandwich	530	270	30	13	0.5	55	1210	41	1	4	22	10	0	40	15	FD
+Grilled Chicken Flatbread Sandwich	1 Sandwich	360	110	12	3.5	0	65	1020	35	3	4	28	4	0	15	10	FD
+Ham and Cheese on a French Roll	1 Sandwich	440	130	14	6	0	50	1380	54	2	3	24	6	0	20	30	FD
+Texas Toast Grilled Cheese	1 Sandwich	510	270	30	13	0.5	40	940	41	1	3	18	10	0	40	15	FD
+Tuna Melt on a Croissant	1 Sandwich	680	430	47	15	0	60	1010	42	2	5	23	6	0	20	15	FD
+Tuna Salad Sandwich on a Plain Bagel	1 Sandwich	570	220	24	3.5	0	35	1130	69	4	7	22	2	0	2	20	FD
+Tuna Salad Sandwich on an English Muffin	1 Sandwich	400	210	24	3.5	0	35	630	34	7	2	15	2	0	8	10	FD
+Tuna Salad Wrap	1 Wrap	520	330	37	9	0	65	1180	25	1	2	24	6	0	25	8	FD
+Turkey Cheddar Bacon on a French Roll	1 Sandwich	460	130	14	6	0	50	1370	55	3	4	28	6	2	20	35	FD
+Bacon, Egg & Cheese on Biscuit	1 Sandwich	470	240	27	14	0.5	75	1310	38	1	4	18	6	0	15	15	FD
+Bacon, Egg & Cheese on Croissant	1 Sandwich	480	240	27	12	0	70	940	40	2	6	19	6	0	15	15	FD
+Bacon, Egg & Cheese on English Muffin	1 Sandwich	290	90	10	4.5	0	70	700	32	7	2	16	4	0	20	10	FD
+Bacon, Egg & Cheese on a Plain Bagel	1 Sandwich	460	100	11	4.5	0	70	1200	67	4	7	23	4	0	10	20	FD
+Big n‘ Toasted™	1 Sandwich	530	250	28	10	0	110	1360	43	1	4	26	6	0	15	15	FD
+Chicken Biscuit	1 Sandwich	540	250	28	11	0	35	1380	51	2	6	21	0	0	4	20	FD
+Egg & Cheese on Biscuit	1 Sandwich	420	210	23	13	0.5	70	1100	37	1	4	14	6	0	15	15	FD
+Egg & Cheese on Croissant	1 Sandwich	440	210	24	11	0	70	730	40	2	5	15	6	0	15	15	FD
+Egg & Cheese on English Muffin	1 Sandwich	240	60	7	3.5	0	70	490	32	7	2	12	4	0	20	10	FD
+Egg & Cheese on a Plain Bagel	1 Sandwich	410	70	7	3.5	0	70	980	67	4	7	19	4	0	10	20	FD
+Egg White Turkey Sausage Flatbread	1 Sandwich	280	70	8	3	0	15	770	32	3	4	18	8	0	20	10	FD
+Egg White Veggie Flatbread	1 Sandwich	280	90	10	4	0	20	690	32	3	3	16	6	0	20	10	FD
+Glazed Donut Breakfast Sandwich	1 Sandwich	360	180	20	8	0	60	720	32	1	13	13	4	0	2	8	FD
+Ham, Egg & Cheese on Biscuit	1 Sandwich	450	220	24	13	0.5	80	1380	38	1	4	18	6	0	15	15	FD
+Ham, Egg & Cheese on Croissant	1 Sandwich	460	220	25	11	0	80	1010	40	2	5	20	6	0	15	15	FD
+Ham, Egg & Cheese on English Muffin	1 Sandwich	280	70	8	3.5	0	95	770	34	7	3	17	4	0	20	10	FD
+Ham, Egg & Cheese on a Plain Bagel	1 Sandwich	440	70	8	4	0	80	1260	67	4	7	24	4	0	10	20	FD
+Sausage Biscuit	1 Sandwich	530	330	36	17	0	45	1260	36	1	3	14	2	0	6	20	FD
+Sausage, Egg & Cheese on Biscuit	1 Sandwich	630	380	43	20	0	115	1620	38	2	4	22	6	0	15	20	FD
+Sausage, Egg & Cheese on Croissant	1 Sandwich	650	390	43	18	0	115	1250	41	2	5	24	6	0	15	20	FD
+Sausage, Egg & Cheese on English Muffin	1 Sandwich	450	240	26	11	0	115	1010	32	7	2	21	6	0	20	15	FD
+Sausage, Egg & Cheese on a Plain Bagel	1 Sandwich	620	240	26	11	0	115	1510	67	4	7	27	6	0	15	25	FD
+Sliced Turkey Breakfast Sandwich	1 Sandwich	310	80	9	3.5	0	85	1100	33	3	3	24	4	0	15	10	FD
+Southwest Steak Burrito	1 Burrito	350	170	19	8	0.5	235	1140	30	1	4	15	6	2	10	15	FD
+Spicy Smoked Sausage Breakfast Sandwich	1 Sandwich	440	220	24	9	0	110	1140	35	7	3	20	6	0	20	15	FD
+Turkey Sausage Breakfast Sandwich	1 Sandwich	390	150	17	6	0	155	860	35	7	2	23	6	0	20	15	FD
+Bacon, Egg & Cheese Wake-Up Wrap	1 Wrap	180	80	9	4	0	40	520	14	1	1	9	4	0	10	4	FD
+Egg & Cheese Wake-Up Wrap	1 Wrap	150	70	8	3.5	0	40	420	13	1	1	7	4	0	10	2	FD
+Egg White Turkey Sausage Wake-Up Wrap	1 Wrap	150	50	6	2.5	0	15	420	14	1	2	10	8	0	15	4	FD
+Egg White Veggie Wake-Up Wrap	1 Wrap	150	60	7	3	0	15	360	14	1	1	9	6	6	15	2	FD
+Ham, Egg & Cheese Wake-Up Wrap	1 Wrap	170	70	8	3.5	0	45	560	14	1	1	10	4	0	10	4	FD
+Sausage, Egg & Cheese Wake-Up Wrap	1 Wrap	260	150	17	7	0	60	680	14	1	1	12	4	0	10	6	FD
+Turkey Sausage Wake-Up Wrap	1 Wrap	210	100	11	4	0	55	550	14	1	0	13	6	0	10	6	FD
+Apple Cheese Danish	1 Danish	330	150	16	7	0	0	270	41	1	18	4	0	10	2	8	FDI
+Cheese Danish	1 Danish	330	150	17	8	0	5	270	39	1	17	5	0	10	4	8	FDI
+Strawberry Cheese Danish	1 Danish	320	150	16	7	0	0	260	40	1	18	4	0	10	2	8	FDI
+Apple Crumb Donut	1 Donut	490	160	18	9	0	0	350	80	2	49	4	2	0	0	8	FDI
+Apple Donut	1 Donut	300	120	13	5	0	0	310	41	1	20	4	0	0	2	8	FDI
+Apple n Spice Donut	1 Donut	270	130	14	6	0	0	350	32	1	8	3	2	0	2	6	FDI
+Bavarian Kreme Donut	1 Donut	270	140	15	7	0	0	350	31	1	9	4	2	0	0	6	FDI
+Blueberry Cake Donut	1 Donut	340	150	17	8	0	30	570	44	1	21	4	0	0	8	10	FDI
+Blueberry Crumb Cake Donut	1 Donut	380	160	18	8	0	30	390	53	1	26	4	0	0	2	10	FDI
+Blueberry Crumb Donut	1 Donut	500	160	18	9	0	0	350	84	2	52	4	2	0	2	8	FDI
+Boston Kreme Donut	1 Donut	310	140	16	7	0	0	370	39	1	16	3	2	0	0	8	FDI
+Boston Scream Donut	1 Donut	310	140	16	7	0	0	360	40	1	19	3	2	0	0	8	FDI
+Bow Tie Donut	1 Donut	310	140	15	7	0	0	400	39	1	15	4	0	0	0	8	FDI
+Butternut Donut	1 Donut	520	220	25	13	0	25	310	78	2	47	4	4	0	2	8	FDI
+Caramel Spice Donut	1 Donut	290	150	16	7	0	0	350	33	1	11	4	2	0	4	6	FDI
+Chocolate Caramel Donut	1 Donut	340	150	17	7	0.5	0	370	42	1	20	4	2	0	4	8	FDI
+Chocolate Coconut Cake Donut	1 Donut	550	350	39	25	0	0	390	47	2	22	5	0	0	2	15	FDI
+Chocolate Crumb Cake Donut	1 Donut	380	190	22	9	0	0	490	43	2	22	4	0	0	2	10	FDI
+Chocolate Frosted Cake Donut	1 Donut	370	210	23	10	0	25	320	45	1	20	4	4	0	2	8	FDI
+Chocolate Frosted Coffee Roll	1 Coffee Roll	410	170	19	8	0	0	420	53	3	19	7	0	0	4	15	FDI
+Chocolate Frosted Donut	1 Donut	270	140	15	7	0	0	340	31	1	13	3	2	0	0	8	FDI
+Chocolate Frosted Donut with Sprinkles	1 Donut	290	140	16	7	0	0	340	34	1	14	3	2	0	0	8	FDI
+Chocolate Glazed Cake Donut	1 Donut	370	220	24	11	0	0	390	35	1	17	3	0	0	2	8	FDI
+Chocolate Iced Bismark	1 Bismark	390	170	19	8	0	0	360	52	2	21	5	0	0	2	10	FDI
+Chocolate Kreme Filled Donut	1 Donut	370	190	21	10	0	0	370	42	1	21	4	2	0	2	8	FDI
+Chocolate Peanut Butter Kreme Donut	1 Donut	360	170	19	8	0	0	360	43	1	24	3	2	0	0	8	FDI
+Cinnamon Cake Donut	1 Donut	340	200	22	10	0	25	300	38	1	13	3	4	0	2	8	FDI
+Cinnamon Cake Stick	1 Stick	350	160	18	8	0	35	420	44	2	19	4	2	0	4	10	FDI
+Cinnamon Guava Donut	1 Donut	250	130	14	6	0	0	340	28	1	8	3	2	20	2	8	FDI
+Coconut Caramel Donut	1 Donut	350	160	18	8	0.5	0	370	44	1	20	4	2	0	4	8	FDI
+Coconut Caramel Drizzle Donut	1 Donut	300	160	17	8	0	0	360	33	1	11	4	2	0	4	8	FDI
+Coconut Guava Donut	1 Donut	310	150	16	8	0	0	350	39	1	17	3	2	20	0	6	FDI
+Coffee Roll	1 Coffee Roll	400	160	18	7	0	0	400	53	3	19	7	0	0	4	10	FDI
+Crumb Cake Donut	1 Donut	380	180	20	9	0	25	330	46	1	25	4	4	0	2	8	FDI
+Double Chocolate Cake Donut	1 Donut	380	230	25	11	0	0	410	36	2	17	4	0	0	2	10	FDI
+Dulce de Chocolate Donut	1 Donut	350	150	17	7	0	5	360	45	1	21	4	2	0	4	8	FDI
+Dulce de Leche Donut	1 Donut	290	140	16	7	0	0	340	31	1	10	4	2	0	4	6	FDI
+Eclair	1 Eclair	390	170	19	8	0	0	360	52	2	21	5	0	0	2	10	FDI
+French Cruller	1 Donut	220	140	15	7	0	35	100	18	0	10	2	0	0	0	2	FDI
+Frosted Berry Shortcake Donut	1 Donut	350	170	19	8	0	0	360	43	1	24	3	2	0	0	6	FDI
+Frosted Maple Kreme Donut	1 Donut	360	170	19	8	0	0	360	44	1	25	3	2	0	0	6	FDI
+Frosted Strawberry Dream Donut	1 Donut	360	170	19	8	0	0	360	44	1	25	3	2	0	0	6	FDI
+Glazed Apple Maple Donut	1 Donut	310	130	14	6	0	0	350	41	1	17	3	2	0	0	6	FDI
+Glazed Bavarian Kreme Donut	1 Donut	290	130	15	7	0	0	350	37	1	15	3	2	0	0	6	FDI
+Glazed Cake Donut	1 Donut	360	200	22	10	0	25	300	44	1	19	3	4	0	2	6	FDI
+Glazed Cake Stick	1 Stick	370	160	18	8	0	35	420	48	1	23	4	2	0	2	10	FDI
+Glazed Caramel Donut	1 Donut	330	140	16	7	0	0	350	41	1	19	4	2	0	4	6	FDI
+Glazed Chocolate Cake Stick	1 Stick	390	220	25	11	0	0	540	40	2	17	3	0	0	2	10	FDI
+Glazed Chocolate Kreme Donut	1 Donut	360	170	19	8	0	0	370	44	1	22	4	2	0	0	8	FDI
+Glazed Donut	1 Donut	260	130	14	6	0	0	330	31	1	12	3	2	0	0	6	FDI
+Glazed Guava Donut	1 Donut	280	130	14	6	0	0	340	36	1	15	3	2	20	0	6	FDI
+Glazed Jelly Donut	1 Donut	310	130	14	6	0	0	340	43	1	14	3	2	0	0	6	FDI
+Glazed Lemon Donut	1 Donut	300	130	15	7	0	0	350	39	1	17	3	2	0	0	6	FDI
+Glazed Strawberry Donut	1 Donut	320	130	14	6	0	0	350	45	1	21	3	2	2	2	6	FDI
+Glazed Vanilla Kreme Donut	1 Donut	370	180	19	8	0	0	360	44	1	25	3	2	0	0	6	FDI
+Guava Burst Donut	1 Donut	260	130	15	7	0	0	340	29	1	9	3	2	20	0	6	FDI
+Guayaba Burst Donut	1 Donut	300	140	15	7	0	0	330	38	1	15	4	2	0	0	6	FDI
+Jelly Donut	1 Donut	270	130	14	6	0	0	330	32	1	15	3	2	0	0	6	FDI
+Jelly Stick	1 Stick	420	160	18	8	0	35	440	60	1	20	4	2	0	2	10	FDI
+Lemon Filled Donut	1 Donut	270	140	15	7	0	0	350	31	1	9	4	2	0	0	6	FDI
+Maple Crumb Cake Donut	1 Donut	380	180	20	9	0	25	330	45	1	25	4	4	0	2	8	FDI
+Maple Frosted Coffee Roll	1 Coffee Roll	410	170	19	8	0	0	410	54	3	20	7	0	0	4	10	FDI
+Maple Frosted Donut	1 Donut	270	140	15	7	0	0	340	32	1	14	3	2	0	0	6	FDI
+Maple Kreme Donut	1 Donut	320	170	19	8	0	0	350	36	1	17	4	2	0	0	6	FDI
+Maple Kreme Drizzle Donut	1 Donut	370	170	19	8	0	0	360	47	1	28	3	2	0	0	6	FDI
+Marble Frosted Donut	1 Donut	270	140	15	7	0	0	340	32	1	13	3	2	0	0	8	FDI
+Old Fashioned Cake Donut	1 Donut	320	200	22	10	0	25	300	33	1	9	3	4	0	10	6	FDI
+PB&J Flavored Kreme Donut	1 Donut	360	170	19	8	0	0	360	44	1	26	3	2	0	0	6	FDI
+Peanut Butter Flavored Kreme Donut	1 Donut	320	170	19	8	0	0	350	36	1	17	3	2	0	0	6	FDI
+Pina Boom Donut	1 Donut	270	140	15	7	0	0	350	32	1	12	4	2	10	0	6	FDI
+Pina Colada Donut	1 Donut	330	150	17	9	0	0	380	42	1	20	4	2	10	0	8	FDI
+Plain Cake Stick	1 Stick	330	160	18	8	0	35	420	36	1	12	4	2	0	2	10	FDI
+Powdered Cake Donut	1 Donut	340	200	22	10	0	25	300	38	1	13	4	4	0	2	6	FDI
+Powdered Cake Stick	1 Stick	360	160	18	8	0	35	420	43	2	18	5	2	0	2	10	FDI
+Pumpkin Cake Donut	1 Donut	360	190	21	10	0	15	380	39	1	20	3	2	0	2	8	FDI
+Pumpkin Crumb Cake Donut	1 Donut	450	210	23	10	0	15	390	56	1	35	4	2	0	2	10	FDI
+Pumpkin Pie Donut	1 Donut	380	180	20	9	0	0	380	46	1	25	4	2	0	0	8	FDI
+Sour Cream Donut	1 Donut	350	150	17	7	0	10	330	47	1	26	4	0	0	2	6	FDI
+Spiced Chocolate Caramel Donut	1 Donut	340	150	17	7	0.5	0	370	42	1	20	4	2	0	4	8	FDI
+Sprinkle the Joy Donut	1 Donut	290	140	15	7	0	0	340	35	1	16	3	2	0	0	6	FDI
+Stars and Stripes Donut	1 Donut	300	120	14	6	0	0	320	41	1	19	4	0	0	2	8	FDI
+Strawberry Dream Donut	1 Donut	330	170	19	8	0	0	350	36	1	17	3	2	0	0	6	FDI
+Strawberry Dream Swirl Donut	1 Donut	370	170	19	8	0	0	360	47	1	28	3	2	0	0	6	FDI
+Strawberry Frosted Donut	1 Donut	280	140	15	7	0	0	340	32	1	14	3	2	0	0	6	FDI
+Strawberry Shortcake Donut	1 Donut	320	170	19	8	0	0	350	35	1	16	3	2	0	0	6	FDI
+Sugar Raised Donut	1 Donut	230	130	14	6	0	0	330	22	1	4	3	2	0	0	6	FDI
+Vanilla Berry Shortcake Donut	1 Donut	350	170	19	8	0	0	360	43	1	24	3	2	0	0	6	FDI
+Vanilla Frosted Coffee Roll	1 Coffee Roll	410	170	19	8	0	0	410	54	3	20	7	0	0	4	10	FDI
+Vanilla Kreme Filled Donut	1 Donut	380	210	23	10	0	0	370	42	1	22	4	2	0	0	6	FDI
+Vanilla Peanut Butter Kreme Donut	1 Donut	360	170	19	8	0	0	360	44	1	26	3	2	0	0	6	FDI
+\.
+
+
+--
+-- PostgreSQL database dump complete
+--
+
