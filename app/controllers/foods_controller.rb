@@ -107,9 +107,9 @@ class FoodsController < ApplicationController
                       
                       ]
   
-      @top_3_amazon = [{food_name: 'Seapoint Farms Dry Roasted Edamame', img: 'eda.png', url: 'http://www.amazon.com/gp/product/B000G2UUOS/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000G2UUOS&linkCode=as2&tag=ffp-amazon-top3-20&linkId=4G3FQN7OT5TMTHES'},
+      @top_3_amazon = [{food_name: 'Quest Nutrition Protein Bar', img: 'qb.png', url: 'http://www.amazon.com/gp/product/B00I0DI0Z6/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00I0DI0Z6&linkCode=as2&tag=ffp-amazon-top3-20&linkId=TXVHB3WQDQCHJWOC'},
                        {food_name: 'Optimum Nutrition Whey Gold Standard', img: 'onwhey.png', url: 'http://www.amazon.com/gp/product/B000QSNYGI/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000QSNYGI&linkCode=as2&tag=ffp-amazon-top3-20&linkId=PQUMGE32I7G2WET6'},
-                       {food_name: 'Power Crunch Bars - Cookies and Creme', img: 'pc.png', url: 'http://www.amazon.com/gp/product/B000FRSSFC/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000FRSSFC&linkCode=as2&tag=ffp-amazon-top3-20&linkId=DVCUF5FAYKWNXXVM'}
+                       {food_name: 'CytoSport Muscle Milk Lean Protein Powder', img: 'mm.png', url: 'http://www.amazon.com/gp/product/B000FRSSFC/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000FRSSFC&linkCode=as2&tag=ffp-amazon-top3-20&linkId=DVCUF5FAYKWNXXVM'}
                       ]
     end
 
