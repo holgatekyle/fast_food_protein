@@ -109,7 +109,7 @@ class FoodsController < ApplicationController
   
       @top_3_amazon = [{food_name: 'Quest Nutrition Protein Bar', img: 'qb.png', url: 'http://www.amazon.com/gp/product/B00I0DI0Z6/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00I0DI0Z6&linkCode=as2&tag=ffp-amazon-top3-20&linkId=TXVHB3WQDQCHJWOC'},
                        {food_name: 'Optimum Nutrition Whey Gold Standard', img: 'onwhey.png', url: 'http://www.amazon.com/gp/product/B000QSNYGI/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000QSNYGI&linkCode=as2&tag=ffp-amazon-top3-20&linkId=PQUMGE32I7G2WET6'},
-                       {food_name: 'CytoSport Muscle Milk Lean Protein Powder', img: 'mm.png', url: 'http://www.amazon.com/gp/product/B000FRSSFC/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000FRSSFC&linkCode=as2&tag=ffp-amazon-top3-20&linkId=DVCUF5FAYKWNXXVM'}
+                       {food_name: 'CytoSport Muscle Milk Lean Protein Powder', img: 'mm.png', url: 'http://www.amazon.com/gp/product/B0015QSW4O/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0015QSW4O&linkCode=as2&tag=ffp-amazon-top3-20&linkId=CKVALDK4C7PQERA4'}
                       ]
     end
 
