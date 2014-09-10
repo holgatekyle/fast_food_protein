@@ -1,5 +1,5 @@
 ---
-title: "Top 9 Best Protein on Amazon"
+title: "9 Best Protein Items on Amazon"
 author: "Kyle"
 created_at: "Sept 9, 2014"
 ---
