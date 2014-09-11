@@ -1,0 +1,173 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: checkers; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE checkers (
+    food_name character varying(255),
+    serving_size character varying(255),
+    calories numeric,
+    cals_from_fat integer,
+    fat numeric,
+    sat_fat numeric,
+    trans_fat numeric,
+    cholesterol integer,
+    sodium integer,
+    carbs numeric,
+    fiber numeric,
+    sugars numeric,
+    protein numeric,
+    vit_a numeric,
+    vit_c numeric,
+    calcium numeric,
+    iron numeric,
+    food_class character varying(255)
+);
+
+
+ALTER TABLE public.checkers OWNER TO postgres;
+
+--
+-- Data for Name: checkers; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY checkers (food_name, serving_size, calories, cals_from_fat, fat, sat_fat, trans_fat, cholesterol, sodium, carbs, fiber, sugars, protein, vit_a, vit_c, calcium, iron, food_class) FROM stdin;
+Kid’s Burger 	110g	280	110	12	6	0	20	570	28	2	3	15	\N	\N	\N	\N	FD
+Kid’s Cheeseburger 	120g	320	130	15	8	0	30	730	29	2	3	16	\N	\N	\N	\N	FD
+Bacon Cheddar Burger 	125g	370	170	19	9	0	35	730	29	2	3	20	\N	\N	\N	\N	FD
+Bacon Double Cheeseburger 	250g	650	380	42	20	1.5	75	1340	32	4	6	35	\N	\N	\N	\N	FD
+Big Buford 	230g	570	320	36	18	1.5	65	1090	31	3	5	31	\N	\N	\N	\N	FD
+Bacon Buford 	255g	680	420	46	21	2	45	1510	31	3	5	34	\N	\N	\N	\N	FD
+Bacon Swiss Buford 	250g	660	400	45	21	1.5	85	1310	28	4	4	35	\N	\N	\N	\N	FD
+1/4 LB. Champ 	205g	490	270	30	12	0	65	810	32	4	3	22	\N	\N	\N	\N	FD
+1/4 LB. Champ with Cheese 	225g	580	350	39	18	0	90	930	33	4	3	24	\N	\N	\N	\N	FD
+1/4 LB. Bacon Cheese Champ 	235g	630	370	41	18	0	100	1230	35	5	4	29	\N	\N	\N	\N	FD
+1/2 LB. Double Champ 	280g	740	470	52	25	0	120	1030	30	3	5	39	\N	\N	\N	\N	FD
+1/2 LB. Double Champ with Cheese	300g	790	490	54	28	0	125	1360	34	4	3	42	\N	\N	\N	\N	FD
+Checkerburger 	170g	390	200	22	8	0	20	680	32	3	5	16	\N	\N	\N	\N	FD
+Checkerburger with Cheese 	179g	420	235	24	12	0	25	810	33	3	5	18	\N	\N	\N	\N	FD
+Cheese Double Cheese 	190g	510	270	31	17	1.5	65	1140	31	3	4	29	\N	\N	\N	\N	FD
+Chili Cheeseburger 	135g	320	140	15	8	0	15	620	30	3	3	18	\N	\N	\N	\N	FD
+Double Chili Cheeseburger 	180g	460	240	26	14	1	55	760	30	3	3	27	\N	\N	\N	\N	FD
+Double Decker 	215g	480	250	28	13	1	45	720	31	3	4	27	\N	\N	\N	\N	FD
+Rallyburger 	170g	390	200	22	8	0	20	680	32	3	5	16	\N	\N	\N	\N	FD
+Rallyburger with Cheese 	179g	420	235	24	12	0	25	810	33	3	5	18	\N	\N	\N	\N	FD
+Smokehouse Buford 	265g	650	330	37	13	0	90	1610	44	4	15	36	\N	\N	\N	\N	FD
+Triple Cheeseburger 	250g	690	380	43	23	2	105	1450	33	4	5	43	\N	\N	\N	\N	FD
+BLT 	140g	380	150	16	3.5	0	35	830	47	4	3	13	\N	\N	\N	\N	FD
+Crispy Fish Sandwich 	165g	430	180	19	6	0	45	780	51	4	6	14	\N	\N	\N	\N	FD
+Deep Sea Double 	240g	640	280	31	13	1	95	1170	63	5	5	25	\N	\N	\N	\N	FD
+Frank’s RedHot Chicken Sandwich 	150g	340	140	16	8	0	15	1340	34	2	3	16	\N	\N	\N	\N	FD
+Homestyle Chicken Strip Sandwich 	240g	670	370	41	11	0	65	1420	50	4	4	27	\N	\N	\N	\N	FD
+Screamin’ Chicken Strip Sandwich 	230g	650	370	41	13	0	60	1690	45	3	3	25	\N	\N	\N	\N	FD
+Homestyle Chicken Strips Meal (2 piece)	230g	670	340	37	20	0	70	2060	58	5	1	27	\N	\N	\N	\N	FD
+Screamin’ Chicken Strips Meal (2 piece)	225g	670	350	38	20	0	65	2430	59	6	1	23	\N	\N	\N	\N	FD
+Homestyle Chicken Strips Meal (3 piece)	310g	890	440	49	26	0	95	2540	77	7	1	36	\N	\N	\N	\N	FD
+Screamin’ Chicken Strips Meal (3 piece)	320g	970	500	55	29	0	110	3460	82	8	1	36	\N	\N	\N	\N	FD
+Spicy Chicken Sandwich 	165g	550	330	37	10	0	55	1110	39	3	3	17	\N	\N	\N	\N	FD
+Classic Wings Honey BBQ (5 piece) 	169g	390	160	17	5	0	120	810	18	0	17	38	\N	\N	\N	\N	FD
+Classic Wings Honey BBQ (10 piece) 	338g	780	320	34	10	0	240	1620	36	0	34	76	\N	\N	\N	\N	FD
+Classic Wings Honey BBQ (20 piece) 	676g	1560	640	68	20	0	480	3240	72	0	68	152	\N	\N	\N	\N	FD
+Classic Wings Honey BBQ (40 piece) 	1352g	3120	1280	136	40	0	960	6480	144	0	136	304	\N	\N	\N	\N	FD
+Classic Wings Extra Hot (5 piece) 	163g	355	195	21	5.5	0	120	1480	2	1	0	38	\N	\N	\N	\N	FD
+Classic Wings Extra Hot (10 piece) 	326g	710	390	42	11	0	240	2960	4	2	0	76	\N	\N	\N	\N	FD
+Classic Wings Extra Hot (20 piece) 	652g	1420	780	84	22	0	480	5920	8	4	0	152	\N	\N	\N	\N	FD
+Classic Wings Extra Hot (40 piece) 	1304g	2840	1560	168	44	0	960	11840	16	8	0	304	\N	\N	\N	\N	FD
+Classic Wings Parmesan Garlic (5 piece) 	157g	480	320	35	12	0	125	830	1	0	0	39	\N	\N	\N	\N	FD
+Classic Wings Parmesan Garlic (10 piece) 	314g	960	640	70	24	0	250	1660	2	0	0	78	\N	\N	\N	\N	FD
+Classic Wings Parmesan Garlic (20 piece) 	628g	1920	1280	140	48	0	500	3320	4	0	0	156	\N	\N	\N	\N	FD
+Classic Wings Parmesan Garlic (40 piece) 	1256g	3840	2560	280	96	0	1000	6640	8	0	0	312	\N	\N	\N	\N	FD
+Classic Wings Asian Kick (5 piece) 	170g	390	160	17	5	0	120	960	19	0	18	38	\N	\N	\N	\N	FD
+Classic Wings Asian Kick (10 piece) 	340g	780	320	34	10	0	240	1920	38	0	36	76	\N	\N	\N	\N	FD
+Classic Wings Asian Kick (20 piece) 	680g	1560	640	68	20	0	480	3840	76	0	72	152	\N	\N	\N	\N	FD
+Classic Wings Asian Kick (40 piece) 	1360g	3120	1280	136	40	0	960	7680	152	0	144	304	\N	\N	\N	\N	FD
+Classic Wings Medium Buffalo (5 piece) 	232g	335	173	18	5	0.1	120	3420	2	0	1	39	\N	\N	\N	\N	FD
+Classic Wings Medium Buffalo (10 piece) 	464g	670	347	37	10	0.2	240	6840	5	0	1	77	\N	\N	\N	\N	FD
+Classic Wings Medium Buffalo (20 piece) 	928g	1340	694	74	21	0.4	480	13680	9	0	2	154	\N	\N	\N	\N	FD
+Classic Wings Medium Buffalo (40 piece) 	1856g	2680	1387	148	42	0.8	960	27360	18	0	4	309	\N	\N	\N	\N	FD
+All Beef Hot Dog 	95g	280	150	17	9	0	35	1660	23	2	3	11	\N	\N	\N	\N	FD
+Chili Dog 	170g	410	220	25	14	0	55	1160	27	3	5	19	\N	\N	\N	\N	FD
+Chili Cheese Dog 	160g	390	210	23	13	0	50	1150	28	3	4	17	\N	\N	\N	\N	FD
+Fries Small 	85g	300	170	19	10	1	20	700	28	3	0	3	\N	\N	\N	\N	FDI
+Fries Medium 	120g	420	240	27	14	1.5	25	990	40	4	1	5	\N	\N	\N	\N	FDI
+Fries Large 	170g	590	340	38	20	2	40	1410	57	6	1	7	\N	\N	\N	\N	FDI
+Bacon Cheddar Fries 	185g	560	340	37	17	2.5	50	1750	44	5	2	11	\N	\N	\N	\N	FDI
+Bacon Ranch Fries 	175g	640	390	43	17	1.5	45	1730	50	5	2	12	\N	\N	\N	\N	FDI
+Chili Cheese Fries 	220g	550	310	34	16	2.5	50	1610	48	6	2	13	\N	\N	\N	\N	FDI
+Fully Loaded Bacon Cheddar Ranch Fries	210g	640	390	44	17	2	45	1880	51	6	2	11	\N	\N	\N	\N	FDI
+Cinnamon Apple Pie 	85g	240	100	12	5	0	5	310	31	2	7	3	\N	\N	\N	\N	FDI
+Vanilla Shake Small 	300g	330	90	10	7	0	30	180	51	0	39	8	\N	\N	\N	\N	FDD
+Vanilla Shake Medium 	375g	410	120	13	9	0	40	220	64	0	48	10	\N	\N	\N	\N	FDD
+Vanilla Shake Large 	560g	610	170	19	13	0	60	330	95	0	72	14	\N	\N	\N	\N	FDD
+Chocolate Shake Small 	300g	350	90	10	7	0	35	170	57	0	41	7	\N	\N	\N	\N	FDD
+Chocolate Shake Medium 	375g	430	110	12	9	0	40	220	72	0	51	9	\N	\N	\N	\N	FDD
+Chocolate Shake Large 	560g	650	170	19	14	0	65	330	107	0	76	14	\N	\N	\N	\N	FDD
+Strawberry Shake Small 	300g	350	100	11	8	0	40	170	57	0	42	7	\N	\N	\N	\N	FDD
+Strawberry Shake Medium 	375g	440	120	13	10	0	50	210	71	0	53	9	\N	\N	\N	\N	FDD
+Banana Shake Small 	300g	350	90	10	7	0	40	160	56	0	44	9	\N	\N	\N	\N	FDD
+Banana Shake Medium 	375g	440	110	12	9	0	50	200	71	0	54	11	\N	\N	\N	\N	FDD
+Banana Shake Large 	560g	650	170	18	14	0	75	300	105	0	81	16	\N	\N	\N	\N	FDD
+Strawberry Classic Sundae 	170g	250	60	7	5	0	20	140	41	1	34	5	\N	\N	\N	\N	FDI
+Classic Chocolate Strawberry Sundae 	170g	250	60	7	5	0	15	150	41	3	32	6	\N	\N	\N	\N	FDI
+Fudge Classic Sundae 	170g	300	70	8	5	0	15	180	50	2	32	7	\N	\N	\N	\N	FDI
+Hot Fudge Classic Sundae, Chocolate 	200g	350	100	11	8	0	25	230	55	3	48	8	\N	\N	\N	\N	FDI
+Vanilla Cone 	150g	240	70	8	5	0	25	135	37	1	24	6	\N	\N	\N	\N	FDI
+Chocolate Cone 	150g	230	60	7	5	0	25	150	36	2	24	6	\N	\N	\N	\N	FDI
+Swirl Cone 	150g	240	70	7	5	0	25	150	37	1	25	6	\N	\N	\N	\N	FDI
+Wife cone vanila 	240g	430	90	10	7	0	35	240	74	2	46	10	\N	\N	\N	\N	FDI
+Wife cone chocolate 	240g	470	170	19	12	0	40	300	67	4	54	9	\N	\N	\N	\N	FDI
+Wife cone swirl 	240g	430	100	11	7	0	25	250	72	2	46	10	\N	\N	\N	\N	FDI
+Vanilla Cup 	145g	210	60	7	5	0	30	125	32	1	27	5	\N	\N	\N	\N	FDI
+Chocolate Cup 	145g	210	60	7	5	0	25	135	31	2	24	5	\N	\N	\N	\N	FDI
+Swirl Cup 	145g	210	60	7	5	0	25	135	32	2	24	6	\N	\N	\N	\N	FDI
+Mocha Coffee Shake 	380g	670	210	23	16	0.5	70	370	102	5	81	13	\N	\N	\N	\N	FDD
+Banana Split Shake 	425g	720	200	22	16	0	45	390	118	5	92	12	\N	\N	\N	\N	FDD
+Oreo Shake 	380g	700	210	24	13	0	40	480	109	4	82	13	\N	\N	\N	\N	FDD
+Chocolate Toffee Blast 12oz 	245g	440	120	13	9	0	25	260	70	3	57	9	\N	\N	\N	\N	FDD
+Chocolate Toffee Blast 16oz 	325g	580	160	18	12	0	35	350	93	4	76	12	\N	\N	\N	\N	FDD
+Vanilla Toffee Blast 12oz 	260g	510	180	20	13	0.5	55	330	73	5	67	9	\N	\N	\N	\N	FDD
+Vanilla Toffee Blast 16oz 	345g	670	240	26	17	0.5	70	430	97	6	89	12	\N	\N	\N	\N	FDD
+Chocolate M M Blast 12oz 	275g	560	180	20	13	0	40	250	84	5	65	11	\N	\N	\N	\N	FDD
+Chocolate M M Blast 16oz 	365g	740	240	27	18	0	50	330	111	7	87	15	\N	\N	\N	\N	FDD
+Vanilla M M Blast 12oz 	245g	480	130	15	10	0	40	230	78	4	72	9	\N	\N	\N	\N	FDD
+Vanilla M M Blast 16oz 	330g	650	180	20	13	0	55	310	106	6	97	12	\N	\N	\N	\N	FDD
+Strawberry Shake 12oz 	210g	320	80	9	6	0	35	180	53	2	43	7	\N	\N	\N	\N	FDD
+Strawberry Shake 16oz 	280g	430	110	12	8	0	50	240	71	2	57	9	\N	\N	\N	\N	FDD
+Strawberry Shake 22oz 	385g	590	150	16	11	0	70	330	98	3	78	12	\N	\N	\N	\N	FDD
+Strawberry Shake 32oz 	560g	860	220	24	17	0	100	480	143	4	114	18	\N	\N	\N	\N	FDD
+Vanilla Shake 12oz 	215g	320	100	11	8	0	35	200	47	1	36	8	\N	\N	\N	\N	FDD
+Vanilla Shake 16oz 	290g	430	130	15	10	0	50	270	64	2	48	10	\N	\N	\N	\N	FDD
+Vanilla Shake 22oz 	400g	590	180	20	14	0	65	370	88	3	67	14	\N	\N	\N	\N	FDD
+Vanilla Shake 32oz 	580g	860	260	29	20	0	95	540	127	4	97	21	\N	\N	\N	\N	FDD
+Chocolate Shake 12oz 	220g	330	100	11	8	0	35	200	52	2	41	8	\N	\N	\N	\N	FDD
+Chocolate Shake 16oz 	295g	450	130	14	10	0	45	270	69	3	54	10	\N	\N	\N	\N	FDD
+Chocolate Shake 22oz 	405g	610	180	20	14	0	65	370	95	4	75	14	\N	\N	\N	\N	FDD
+Chocolate Shake 32oz 	580g	880	250	28	20	0	95	530	136	5	107	20	\N	\N	\N	\N	FDD
+Banana Shake 12oz 	210g	320	90	10	7	0	35	200	50	2	39	7	\N	\N	\N	\N	FDD
+Banana Shake 16oz 	280g	430	120	13	9	0	45	270	67	3	53	10	\N	\N	\N	\N	FDD
+Banana Shake 22oz 	385g	590	170	18	13	0	60	370	92	4	72	13	\N	\N	\N	\N	FDD
+Banana Shake 32oz 	560g	860	240	27	19	0	90	530	134	5	105	20	\N	\N	\N	\N	FDD
+Strawberry Shake Large	560g	660	180	20	14	0.5	80	310	106	0	79	14	\N	\N	\N	\N	FDD
+\.
+
+
+--
+-- PostgreSQL database dump complete
+--
+
