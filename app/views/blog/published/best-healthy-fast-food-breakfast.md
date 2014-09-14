@@ -55,6 +55,6 @@ Now let's find some **healthier alternatives** for breakfast. Eggs and egg white
 
 	This is the best breakfast option I found from Burger King. I'd prefer the nutritional content of the Egg White Delight over this sandwich, but it's still a solid choice for those that prefer Burger King.
 	
-That wraps up our guide to **fast food breakfast**! All of the above data is available using our [fast food nutrition search tool](http://www.fastfoodprotein.com/search), where you can find breakfast choices that fit your needs.
+That wraps up our guide to **fast food breakfast**! All of the above data is available using our [fast food nutrition comparison tool](http://www.fastfoodprotein.com/search), where you can find breakfast choices that fit your needs. You can also read about **[the best healthy fast food meals](http://www.fastfoodprotein.com/blog/best-healthy-fast-food)** for food beyond breakfast.
 
 Have comments or feedback? Let me know on [twitter](https://twitter.com/FastFoodProtein) or email kyle (at) fastfoodprotein.com.

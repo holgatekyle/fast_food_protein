@@ -66,6 +66,6 @@ So you're ready to make some healthier decisions? Excellent! Here's what I see a
 	*Calories 130, Protein 19, Fats 3g, Carbs 10g* 
 	
 	
-There you have it! All of the above data is available using our [fast food nutrition search tool](http://www.fastfoodprotein.com/search), where you can find other great healthy choices.
+There you have it! All of the above data is available using our [fast food nutrition search tool](http://www.fastfoodprotein.com/search), where you can find other great healthy choices. If you're looking for high-quality protein available online, be sure to check out **[the 9 Best Protein Choices on Amazon](http://www.fastfoodprotein.com/blog/best-protein-on-amazon)**.
 
 Have comments or feedback? Let me know on [twitter](https://twitter.com/FastFoodProtein) or email kyle (at) fastfoodprotein.com.

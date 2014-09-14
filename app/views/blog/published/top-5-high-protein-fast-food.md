@@ -48,6 +48,6 @@ Enough talk, you're hungry. Let's get to the goods. We'll work down [our top pro
 
 	Rounding out our top 5, the favorites of the West coast - In n Out Burger. With 4 patties and 4 slices of cheese, there's a lot to love about this burger.
 	
-If you want to find a high protein meal of your own, check out the [fast food nutrition search tool](http://www.fastfoodprotein.com/search).
+If you want to find a high protein meal of your own, check out the [fast food nutrition search tool](http://www.fastfoodprotein.com/search). If you're looking for some **high-quality protein delivered to your doorstep**, check out our **[Amazon page](http://www.fastfoodprotein.com/amazon)**.
 
 Comments? Feedback? Let me know on [twitter](https://twitter.com/FastFoodProtein) or email kyle (at) fastfoodprotein.com. 

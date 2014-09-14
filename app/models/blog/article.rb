@@ -41,6 +41,7 @@ class Blog::Article
   end
 
   def self.find_by_name(name)
+
     file = find_file_by(name)
     self.new extract_data_from(file)
   end
@@ -55,7 +56,7 @@ class Blog::Article
   end
 
   def self.find_file_by(name)
-    id = article_files.index { |x| x =~ /#{name}.*/ }
+    id = article_files.index { |x| x =~ /#{name}.md/ }
     article_files[id]
   end
 

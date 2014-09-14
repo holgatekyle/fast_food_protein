@@ -57,6 +57,6 @@ Finally, King of the Protein List - Optimum Nutrition Whey. <strong>This protein
 
 ##More Protein Options
 	
-That wraps up my Top 9 list of favorite protein products available on Amazon.  To check out even more recommended Amazon protein sources, [check out our Amazon protein search page](http://www.fastfoodprotein.com/amazon).
+That wraps up my Top 9 list of favorite protein products available on Amazon.  To check out even more recommended Amazon protein sources, **[check out our Amazon protein search page](http://www.fastfoodprotein.com/amazon)**.
 
 Have comments or feedback? Let me know on [twitter](https://twitter.com/FastFoodProtein) or email kyle (at) fastfoodprotein.com.
