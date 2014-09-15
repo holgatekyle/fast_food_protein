@@ -1,6 +1,6 @@
 	<% provide(:title, 'Compare Fast Food Nutrition and Protein from All Restaurants') %>
 	<div class="center container-fluid">	
-	<h1>All Fast Food Restaurants</h1>
+	<h1>Compare All Fast Food Restaurants</h1>
 	
 	<% if params[:search] %>
 	<%= render partial: "shared/most_protein", locals: {most_protein: @grid_foods, all_list: true} %>
