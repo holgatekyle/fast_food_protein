@@ -10,7 +10,15 @@ Today, we're going to look at some rules of thumb to remember when placing your 
 
 ##Nutritional Facts You Should Remember
 
-This post is just going to give you some nutrition guidelines to remember and take into consideration the next time you're ordering fast food. These are general rules and there could be exceptions, so always [compare menu items](http://www.fastfoodprotein.com/search) if you're uncertain.
+<div class = "col-sm-4 blog-img-div">
+<img alt="breakfast eggs" class="blog-top-image" src="/assets/blog/freesmells.JPG" />
+<div class="image-caption">Smells: 0 calories!</div>
+</div>
+
+This post is going to give you some nutrition guidelines to remember and take into consideration the next time you're ordering fast food. These are general rules and there could be exceptions, so always [compare menu items](http://www.fastfoodprotein.com/search) if you're uncertain.
+
+<br>
+<br>
 
 - **Chicken instead of beef** when possible. If this sounds familiar, it's because I touched on it in my [healthy fast food](http://www.fastfoodprotein.com/blog/best-healthy-fast-food) article, but it bears repeating. Unless beef is 85% lean (15% fat), chicken is going to have less calories, less fat, and more protein per lb. Given that fast food restaurants don't reveal what percent of their beef is lean and fatty beef is cheaper, it's safe to assume you're not likely to get lean beef.
 
@@ -22,7 +30,7 @@ This post is just going to give you some nutrition guidelines to remember and ta
 
 - **French fries run from 230-500 calories** on average. The breakdown looks like *Small - 230 calories, Medium - 400 calories, Large - 500 calories*. Remember that adding toppings like Chili Cheese can add hundreds of calories!
 
-- **Opting for a wrap doesn't mean fewer calories**. A wrap may sound healthier than a bun, but grain-based wraps often have the same or even more calories as a bun. For example, a *McDoanlds Premium Grilled Chicken Ranch BLT Sandwich* has 450 calories, 43 grams of carbs and a *McDonalds Premium McWrap with Grilled Chicken and Bacon* has 480 calories and 42 grams of carbs. The fiber content is identical between the choices as well, so there's no real nutritional benefit to the wrap.
+- **Opting for a wrap doesn't mean fewer calories**. A wrap may sound healthier than a bun, but grain-based wraps often have the same or even more calories as a bun. For example, a *McDoanlds Premium Grilled Chicken Ranch BLT Sandwich* has 450 calories and 43 grams of carbs; a *McDonalds Premium McWrap with Grilled Chicken and Bacon* has 480 calories and 42 grams of carbs. The fiber content is identical between the choices as well, so there's no real nutritional benefit to the wrap.
 
 ##That's All, Folks
 
