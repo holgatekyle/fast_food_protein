@@ -2,6 +2,7 @@
 title: "Best Healthy Fast Food Breakfast"
 author: "Kyle"
 created_at: "Sept 12, 2014"
+tags: ["breakfast", "fast food", "healthy"]
 ---
 
 Grabbing a quick bite to eat in the morning from a fast food joint is easy enough, but how about one that's healthy? I'll show you what you need to avoid and what will start your day off right.

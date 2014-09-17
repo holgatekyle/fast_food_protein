@@ -1,7 +1,7 @@
 # app/models/blog/article.rb
 class Blog::Article
   include ActiveModel::Model
-  attr_accessor :title, :content, :created_at, :permalink, :author
+  attr_accessor :title, :content, :created_at, :permalink, :author, :tags
 
   # Used for ATOM-feed id
   def id
@@ -38,6 +38,23 @@ class Blog::Article
     article_files.reverse.map do |file|
       self.new extract_data_from(file)
     end
+  end
+  
+  def self.distinct_tags
+    uniq_tags = Array.new
+    
+    self.all.uniq{|x| x.tags}.reject{|x| x.tags.blank?}.each do |x|
+      if x.tags.kind_of?(Array)
+        then
+        x.tags.each do |y|
+          uniq_tags.push(y)
+        end
+      else
+        uniq_tags.push(x.tags)
+      end
+    end
+    
+    return uniq_tags.uniq!
   end
 
   def self.find_by_name(name)

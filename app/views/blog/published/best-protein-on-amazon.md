@@ -2,6 +2,7 @@
 title: "9 Best Protein Items on Amazon"
 author: "Kyle"
 created_at: "Sept 9, 2014"
+tags: ["amazon", "healthy", "protein"]
 ---
 
 Check out the best sources of protein available [on Amazon](http://www.fastfoodprotein.com/amazon), all Prime-eligible and great tasting.

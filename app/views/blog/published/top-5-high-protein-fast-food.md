@@ -2,6 +2,7 @@
 title: "Top 5 High Protein Fast Food Meals"
 author: "Kyle"
 created_at: "Sept 4, 2014"
+tags: ["protein","fast food"]
 ---
 
 If you have a fever, and the only prescription is more protein, you're not going to want to miss this list.

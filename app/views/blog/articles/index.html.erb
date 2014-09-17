@@ -20,18 +20,25 @@
 	</div>
 	
 	<div class="col-sm-3 pull-right" style="text-align:right">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- side-blog -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:100px;height:250px"
-     data-ad-client="ca-pub-4200540000959453"
-     data-ad-slot="9373287496"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
+		<div class="center">
+			<h3>Find Posts by Tags</h3>
+			<% @all_tags.each do |tags| %>
+				<span class="blog-tag"><a href="http://www.fastfoodprotein.com/blog?<%= tags %>"><%= tags.titleize %></a></span>
+			<%end%>
+		</div>
+		<div>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- side-blog -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:100px;height:250px"
+		     data-ad-client="ca-pub-4200540000959453"
+		     data-ad-slot="9373287496"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		</div>
 				<div class="row col-sm-offset-1"><a class="twitter-timeline" href="https://twitter.com/FastFoodProtein" data-widget-id="508805102061092864">Tweets by @FastFoodProtein</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
 
 	</div>
 	</div>

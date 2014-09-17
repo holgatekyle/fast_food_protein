@@ -2,6 +2,7 @@
 title: "Fast Food Nutrition Cheat Sheet"
 author: "Kyle"
 created_at: "Sept 15, 2014"
+tags: ["fast food", "healthy"]
 ---
 
 Today, we're going to look at some rules of thumb to remember when placing your fast food order.

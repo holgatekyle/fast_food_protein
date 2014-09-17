@@ -2,6 +2,7 @@
 title: "Best Healthy Fast Food Choices"
 author: "Kyle"
 created_at: "Sept 3, 2014"
+tags: ["fast food", "healthy"]
 ---
 
 A review of the best healthy fast food items on [our website](http://www.fastfoodprotein.com/search) (so far) and give you tips on staying healthy when eating fast food.
