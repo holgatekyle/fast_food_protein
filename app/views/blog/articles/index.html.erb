@@ -23,7 +23,7 @@
 		<div class="center">
 			<h3>Find Posts by Tags</h3>
 			<% @all_tags.each do |tags| %>
-				<span class="blog-tag"><a href="http://www.fastfoodprotein.com/blog?sort=<%= tags %>"><%= tags.titleize %></a></span>
+				<span class="blog-tag"><a href="http://www.fastfoodprotein.com/blog?tags=<%= tags %>"><%= tags.titleize %></a></span>
 			<%end%>
 		</div>
 		<div>
