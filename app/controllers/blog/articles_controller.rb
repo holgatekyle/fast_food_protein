@@ -6,7 +6,8 @@ class Blog::ArticlesController < ApplicationController
     @all_tags = Blog::Article.distinct_tags
     
     if params[:tags]
-      @articles = @all_articles.select{ |article| article.tags == params[:tags]}
+      puts 'tagsssssssssss'
+      @articles = @all_articles.select{ |article| article.tags.include? params[:tags]}
       
       if !@articles.any?
         @articles = @all_articles
