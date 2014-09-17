@@ -52,6 +52,10 @@
 </div>
 
 <div class="container-fluid col-md-10 col-md-offset-1 main-box">
+	<% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-info" %>
+  <% end %>
+  
 	<%= yield %>
 	
 	<div class="row center"><span class="fb-share-button fb-share-shim" data-href="http://www.fastfoodprotein.com/"></span></div>
