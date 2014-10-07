@@ -102,13 +102,14 @@ class FoodsController < ApplicationController
                       { food_name: 'Promax LS Lower Sugar Protein Bar', calories: 220, fat: 6, protein: 18, carbs: 33, fiber: 14, sugar: 9, cholesterol: 5, sodium: 240, url: 'http://www.amazon.com/gp/product/B004JRQ3DS/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B004JRQ3DS&linkCode=as2&tag=fasfoopro-20&linkId=5UE37OZ7RKNGVGQM' },
                       {  food_name: 'Body Fortress Whey Protein Powder', calories: 170, fat: 2.5, protein: 30, carbs: 7, fiber: 0, sugar: 2, cholesterol: 85, sodium: 70, url: 'http://www.amazon.com/gp/product/B001G8Y948/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B001G8Y948&linkCode=as2&tag=fasfoopro-20&linkId=OBU735TQJP2IIYZM' },
                       {  food_name: 'CytoSport Muscle Milk Lean Protein Powder', calories: 150, fat: 6, protein: 16, carbs: 9, fiber: 2, sugar: 2, cholesterol: 10, sodium: 85, url: 'http://www.amazon.com/gp/product/B0015QSW4O/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0015QSW4O&linkCode=as2&tag=fasfoopro-20&linkId=JGYVBFJMIMJLXPEY' },
-                      {  food_name: 'CytoSport Muscle Milk Ready-to-Drink Shake', calories: 230, fat: 9, protein: 25, carbs: 12, fiber: 2, sugar: 3, cholesterol: 10, sodium: 430, url: 'http://www.amazon.com/gp/product/B002DUD7I2/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B002DUD7I2&linkCode=as2&tag=fasfoopro-20&linkId=GCVAMUOGDFBSPQB5' }
+                      {  food_name: 'CytoSport Muscle Milk Ready-to-Drink Shake', calories: 230, fat: 9, protein: 25, carbs: 12, fiber: 2, sugar: 3, cholesterol: 10, sodium: 430, url: 'http://www.amazon.com/gp/product/B002DUD7I2/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B002DUD7I2&linkCode=as2&tag=fasfoopro-20&linkId=GCVAMUOGDFBSPQB5' },
+                      {  food_name: 'Rise Bar Protein Almond Honey', calories: 280, fat: 16, protein: 20, carbs: 20, fiber: 4, sugar: 13, cholesterol: 0, sodium: 25, url: 'http://www.amazon.com/gp/product/B004X2LH9Y/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B004X2LH9Y&linkCode=as2&tag=fasfoopro-20&linkId=TN6JSUIODYEM6M5X' }
                       
                       ]
   
       @top_3_amazon = [{food_name: 'Quest Nutrition Protein Bar', img: 'qb.png', url: 'http://www.amazon.com/gp/product/B00I0DI0Z6/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00I0DI0Z6&linkCode=as2&tag=ffp-amazon-top3-20&linkId=TXVHB3WQDQCHJWOC'},
                        {food_name: 'Optimum Nutrition Whey Gold Standard', img: 'onwhey.png', url: 'http://www.amazon.com/gp/product/B000QSNYGI/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000QSNYGI&linkCode=as2&tag=ffp-amazon-top3-20&linkId=PQUMGE32I7G2WET6'},
-                       {food_name: 'CytoSport Muscle Milk Lean Protein Powder', img: 'mm.png', url: 'http://www.amazon.com/gp/product/B0015QSW4O/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0015QSW4O&linkCode=as2&tag=ffp-amazon-top3-20&linkId=CKVALDK4C7PQERA4'}
+                       {food_name: 'Rise Bar Protein Almond Honey', img: 'rise.jpg', url: 'http://www.amazon.com/gp/product/B004X2LH9Y/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B004X2LH9Y&linkCode=as2&tag=ffp-amazon-top3-20&linkId=JOEPHDKGM5BZHJKZ'}
                       ]
     end
 
